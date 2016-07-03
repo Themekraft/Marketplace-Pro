@@ -1472,10 +1472,6 @@ table.profile-fields td {
 #buddypress .standard-form input[type=text] {
     width: 100%;
 }
-#buddypress .wp-editor-tools,
-#buddypress .quicktags-toolbar {
-  display: none;
-}
 #buddypress select[multiple] {
   min-width: 300px;
   border: 1px solid #ddd;
@@ -1508,10 +1504,6 @@ p.field-visibility-settings-toggle,
   font-size: 13px;
   font-weight: normal;
   padding: 5px;
-}
-#buddypress a.button.edit {
-    background: #ddd;
-    border: 1px solid #ccc;
 }
 
 
@@ -1657,7 +1649,7 @@ ul.avatar-nav-items {
 #buddypress .comment-reply-link,
 #buddypress .generic-button a,
 #buddypress a.button,
-#buddypress button,
+#buddypress button[type="submit"],
 #buddypress input[type=button],
 #buddypress input[type=reset],
 #buddypress input[type=submit],
@@ -1681,7 +1673,7 @@ a.bp-title-button {
 #buddypress .comment-reply-link:hover,
 #buddypress a.button:focus,
 #buddypress a.button:hover,
-#buddypress button:hover,
+#buddypress button[type="submit"]:hover,
 #buddypress div.generic-button a:hover,
 #buddypress input[type=button]:hover,
 #buddypress input[type=reset]:hover,
@@ -1705,4 +1697,8 @@ a.bp-title-button {
     font-size: 90%;
     margin-left: 2px;
     border-radius: 50%;
+}
+#buddypress a.button.edit {
+  background: #ddd;
+  border: 1px solid #ccc;
 }
