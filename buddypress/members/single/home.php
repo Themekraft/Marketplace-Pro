@@ -13,9 +13,6 @@
 		endif;
 		?>
 
-		<?php // bp_get_displayed_user_nav(); ?>
-
-
 	</div><!-- #item-header -->
 
 	<div class="row">
@@ -23,15 +20,23 @@
 		<div id="profile-sidebar" class="col-xs-12 col-sm-3 col-lg-3">
 
 			<div id="item-nav">
-				<div class="item-list-tabs menu-type-tabs" id="object-nav" role="navigation">
-					<ul class="user-nav" role="tablist">
+				<div class="item-list-tabs no-ajax" id="object-nav" role="navigation">
+					<ul>
 
 						<?php bp_get_displayed_user_nav(); ?>
+
+						<?php
+
+						/**
+						 * Fires after the display of member options navigation.
+						 *
+						 * @since 1.2.4
+						 */
+						do_action( 'bp_member_options_nav' ); ?>
 
 					</ul>
 				</div>
 			</div><!-- #item-nav -->
-
 		</div>
 
 		<div id="item-body" role="main" class="col-xs-12 col-sm-9 col-lg-9">
