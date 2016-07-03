@@ -16,7 +16,17 @@ get_header(); ?>
 
 				<?php while ( have_posts() ) : the_post(); ?>
 
-					<?php get_template_part( 'content', 'page' ); ?>
+          <?php
+      		    // check if BuddyPress is active
+              if ( function_exists('bp_is_user') ) {
+                // check if we are on a BuddyPress member profile
+                if( bp_is_user() ) {
+      					  get_template_part( 'content', 'member' );
+                }
+      				} else {
+      					get_template_part( 'content', 'page' ); 
+      				}
+      		?>
 
 					<?php
 						// If comments are open or we have at least one comment, load up the comment template
