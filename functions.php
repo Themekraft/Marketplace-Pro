@@ -242,7 +242,7 @@ function oa_add_google_fonts() {
 
 
 /**
- * WooCommerce Support & Cool Setup
+ * WooCommerce Setup
  ****************************************/
 
 if ( class_exists( 'WooCommerce' ) ) {
@@ -301,5 +301,62 @@ if ( class_exists( 'WooCommerce' ) ) {
         $checkout_url = $woocommerce->cart->get_checkout_url();
         return $checkout_url;
     }
+
+}
+
+
+/**
+ * BuddyPress Setup
+ ****************************************/
+
+if ( class_exists( 'BuddyPress' ) ) {
+
+	// Member profiles - change cropping size of cover image
+	function tk_cover_image( $settings = array() ) {
+	    $settings['width']  = 1168;
+	    $settings['height'] = 400;
+
+	    return $settings;
+	}
+	add_filter( 'bp_before_xprofile_cover_image_settings_parse_args', 'tk_cover_image', 10, 1 );
+
+
+	// Set default member component to profile page instead of activity page
+	define( 'BP_DEFAULT_COMPONENT', 'profile' );
+
+
+	// BuddyPress Nav & Subnav
+	add_action( 'bp_setup_nav', 'tk_bp_nav_tabs', 9999 );
+
+	function tk_bp_nav_tabs() {
+		global $bp;
+
+		// This is how you remove nav tabs or subnav tabs
+		// bp_core_remove_nav_item( 'activity' );
+		// bp_core_remove_subnav_item( $bp->profile->slug, 'change-cover-image' );
+
+		// Renaming a few tabs here
+		$bp->bp_options_nav['profile']['public']['name'] = 'My Profile';
+		$bp->bp_options_nav['profile']['edit']['name'] = 'Edit Profile';
+		$bp->bp_options_nav['profile']['change-avatar']['name'] = 'Change Avatar';
+		// $bp->bp_options_nav['profile']['change-cover-image']['name'] = 'Change Cover';
+
+	}
+
+
+	// BuddyPress Site-Wide Activity Stream - Change Title to the Page Title used for the actual page ;)
+	add_filter( 'bp_get_directory_title', 'buddypress_sitewide_activity_title', 10, 2 );
+
+	function buddypress_sitewide_activity_title( $title) {
+
+	    global $post; global $bp;
+	    if ( bp_is_activity_front_page() ) {
+	        $title = $post->post_title;
+	    }
+
+	    return $title;
+	}
+
+
 
 }

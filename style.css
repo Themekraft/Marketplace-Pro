@@ -551,7 +551,7 @@ display: block;
 	color: inherit;
 	background: transparent;
 	margin-right: 1px;
-	font-size: 14px;
+	font-size: 15px;
 }
 #topnav li a:hover,
 #topnav li a:focus {
@@ -1166,4 +1166,509 @@ html::-webkit-scrollbar { width: 0 !important }
 }
 .woocommerce-cart form input#coupon_code {
     height: 47px;
+}
+
+
+
+
+
+
+/*
+ * BuddyPress
+ *********************************************/
+
+
+
+/* BuddyPress Member Profiles */
+.buddypress.bp-user #content {
+   background: #fff;
+   border: 1px solid #e7e7e7;
+   box-shadow: 0px 0px 3px rgba(0,0,0,0.08);
+	 padding-bottom: 0;
+}
+
+
+/* BP Nav */
+.member-content div#item-nav {
+    margin: 0 -15px;
+    padding: 15px 15px 0 15px;
+    background: transparent;
+}
+.member-content #buddypress div.item-list-tabs ul li {
+		float: none;
+		width: 100%;
+}
+#buddypress div.item-list-tabs ul li a {
+    background-color: transparent;
+    opacity: 1;
+    font-weight: inherit;
+    padding: 7px 10px;
+    margin-right: 1px;
+		margin-bottom: 5px;
+		border-radius: 3px;
+		font-size: 17px;
+}
+#buddypress div.item-list-tabs ul li a:hover,
+#buddypress div.item-list-tabs ul li a:focus {
+    background-color: #eaeaea;
+		color: inherit;
+    opacity: 1;
+    font-weight: inherit;
+}
+#buddypress div.item-list-tabs ul li.current a,
+#buddypress div.item-list-tabs ul li.selected a {
+		background-color: #419ca2;
+		color: #fff;
+    opacity: 1;
+    font-weight: inherit;
+}
+
+/* BP Subnav */
+#buddypress div.item-list-tabs#subnav {
+    margin: 0 -15px 30px;
+    overflow: hidden;
+    padding: 15px 15px 0 15px;
+		background: #e7e7e7;
+}
+.member-content #buddypress #subnav ul li {
+		float: left;
+		width: auto;
+}
+#buddypress #subnav ul li a {
+		margin-bottom: 0;
+		padding: 10px;
+		border-radius: 0;
+    background-color: transparent;
+    opacity: 1;
+    font-weight: inherit;
+		color: #3f3f3f;
+		font-size: 15px;
+}
+#buddypress #subnav ul li a:hover,
+#buddypress #subnav ul li a:focus {
+    background-color: #f1f1f1;
+    color: #3f3f3f;
+    opacity: 1;
+    font-weight: inherit;
+}
+#buddypress #subnav ul li.current a,
+#buddypress #subnav ul li.selected a {
+    background-color: #f9f9f9;
+    color: #3f3f3f;
+    opacity: 1;
+    font-weight: inherit;
+}
+
+
+/* BuddyPress Pages - Global Content Styles */
+#item-body {
+    background: #f9f9f9;
+    padding-bottom: 40px;
+    border-left: 1px solid #e7e7e7;
+}
+.buddypress article.hentry {
+	margin: 0;
+}
+
+/* BuddyPress Member Profiles */
+.member-content #activity-filter-select {
+	display: none;
+}
+@media (min-width: 992px) {
+	.member-content #buddypress div#item-header {
+	    margin-top: 20px;
+	    margin-bottom: 20px;
+	}
+}
+@media (max-width: 767px) {
+	.member-content #buddypress div#item-header {
+	    text-align: center;
+	    width: 100%;
+	}
+	.member-content #item-header-avatar {
+		width: 150px;
+		height: auto;
+		overflow: hidden;
+		margin: 30px auto 0;
+	}
+	.member-content #buddypress div#item-header-content {
+		width: 100%;
+	}
+	.member-content #buddypress div#item-header img.avatar {
+	    width: 150px;
+	    height: 150px;
+	}
+	.member-content #buddypress div#item-header div#item-buttons {
+	    width: 260px;
+	    margin: 0 auto 40px;
+	    padding-left: 18px;
+	}
+	.member-content #buddypress div.item-list-tabs ul {
+	    margin-bottom: 10px;
+	}
+}
+#buddypress #cover-image-container {
+    overflow: hidden;
+    margin: -20px -15px;
+}
+#buddypress #header-cover-image {
+  height: 400px;
+}
+div#buddypress div#item-header #item-header-cover-image #item-header-content {
+    clear: both;
+    float: none;
+    margin: 0 -10px 0 -10px;
+    width: auto;
+    display: block;
+    text-align: center;
+}
+div#buddypress #item-header-cover-image #item-header-avatar {
+    float: none;
+    position: relative;
+    text-align: center;
+    margin: 20px auto 0;
+    width: 150px;
+}
+@media (min-width: 768px) {
+	#buddypress div#item-header img.avatar {
+	    margin: 20px 20px 20px 5px;
+	}
+}
+#buddypress #member-page-title {
+	margin-top: 20px;
+}
+div#buddypress div#item-header-cover-image h2 a,
+div#buddypress div#item-header-cover-image h2 {
+  color: #fff;
+}
+#buddypress p,
+#buddypress .item {
+  white-space: initial;
+  text-overflow: initial;
+}
+#buddypress .item-input input,
+#buddypress .item-input textarea {
+    width: 100%;
+    padding-left: 5px;
+}
+#buddypress .item-stacked-label .input-label {
+    width: 100%;
+    display: initial;
+    font-size: 13px;
+}
+.bp-user #buddypress .member-header {
+  background: transparent;
+	color: #fff;
+  padding-top: 40px;
+  padding-bottom: 0;
+}
+.bp-user #item-header-avatar .avatar {
+  border-radius: 50%;
+}
+#member-header-fullname {
+  font-size: 25px;
+  margin: 10px 0;
+  line-height: 1.4;
+}
+.bp-user #item-header-content span.activity {
+    width: 100%;
+    display: block;
+}
+.before-meta-wrap {
+    overflow: auto;
+    width: auto;
+    display: inline-block;
+    margin: 0;
+    background: transparent;
+}
+#profile-sidebar {
+	/*padding-right: 0;*/
+}
+.kpa-profile-group-wrap {
+  margin-top: 30px;
+}
+.kpa-profile-wrap {
+  background: #fff;
+  border: 1px solid rgba(0,0,0,0.1);
+  padding: 10px;
+  margin-bottom: 10px;
+}
+@media (max-width: 380px) {
+  .kpa-profile-data,
+  .kpa-profile-data p,
+  .kpa-profile-label {
+    font-size: 14px;
+  }
+}
+table.profile-fields td,
+table.profile-fields th {
+    display: block;
+}
+table.profile-fields td.label {
+  font-weight: bold;
+  padding: 0;
+}
+table.profile-fields,
+table.profile-fields td {
+    width: 100%;
+    overflow: scroll;
+    word-wrap: break-word;
+    background: transparent;
+    margin-right: 10px;
+    position: relative;
+    padding: 0 0 15px;
+}
+.editfield select option {
+    padding: 14px;
+    background: #f1f1f1;
+    margin-bottom: 1px;
+}
+
+
+/* Edit Profile Pages */
+#buddypress .standard-form h4 {
+  margin-top: 30px;
+}
+#buddypress ul.button-nav {
+    list-style: none;
+    padding: 20px 10px 5px;
+    margin: 30px 0;
+    background: #ddd;
+    overflow: auto;
+    height: auto;
+}
+#buddypress ul.button-nav li {
+  margin: 0 10px 0 0;
+}
+#buddypress ul.button-nav li a {
+  margin: 0;
+  padding: 10px 15px;
+  background: #888;
+  border: none;
+  color: #fff;
+  text-decoration: none;
+}
+#buddypress ul.button-nav li a:hover,
+#buddypress ul.button-nav li a:focus {
+  background: #999;
+  color: #fff;
+  border: none;
+}
+#buddypress ul.button-nav li.current a {
+  background: #f7f7f7;
+  border: none;
+  color: initial;
+}
+.editfield label {
+  font-size: 21px;
+  font-weight: bold;
+  padding: 10px 0;
+  display: block;
+}
+.editfield {
+  margin: 20px 0;
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+.editfield textarea,
+.editfield input[type="text"],
+.editfield input[type="password"],
+.editfield input[type="number"],
+.editfield input[type="email"],
+.editfield input[type="url"],
+.editfield input[type="search"],
+.editfield input[type="tel"] {
+  width: 100%;
+  padding: 25px 15px;
+  background: #fff !important;
+  border: 1px solid #ddd;
+}
+#buddypress .standard-form input[type=text] {
+    width: 100%;
+}
+#buddypress .wp-editor-tools,
+#buddypress .quicktags-toolbar {
+  display: none;
+}
+#buddypress select[multiple] {
+  min-width: 300px;
+  border: 1px solid #ddd;
+}
+.editfield p.description {
+  font-size: 15px;
+  font-style: italic;
+}
+p.field-visibility-settings-toggle,
+.field-visibility-settings-notoggle {
+  background: #e3e3e3;
+  padding: 5px 10px;
+  font-size: 13px;
+  color: #666;
+}
+.field-visibility-settings fieldset {
+  width: auto;
+  float: none;
+  display: inline-block;
+  border: 1px solid #ddd;
+}
+.field-visibility-settings ul.radio {
+  list-style: none;
+  padding-left: 0;
+  width: auto;
+  float: left;
+  margin: 0 10px;
+}
+.editfield ul.radio label {
+  font-size: 13px;
+  font-weight: normal;
+  padding: 5px;
+}
+#buddypress a.button.edit {
+    background: #ddd;
+    border: 1px solid #ccc;
+}
+
+
+
+/* Change Avatar Page */
+
+/* this is some CSS for the view without JS */
+#avatar-upload {
+  background: #fff;
+  border: 1px solid rgba(0,0,0,0.1);
+  padding: 15px;
+  margin: 0;
+}
+#allowed-formats-bp {
+  width: 100%;
+  float: none;
+  display: block;
+  padding: 5px 20px;
+  font-size: 13px;
+  background: #e3e3e3;
+  color: #666;
+}
+#buddypress input[type="file"] {
+  line-height: 14px;
+  margin: 10px 0 20px;
+  width: 180px;
+  font-size: 12px;
+  color: #666;
+}
+
+/* Fixes for the normal "Change Avatar" page */
+.bp-avatar-nav ul.avatar-nav-items li.current {
+    border-bottom-color: #f4f4f4;
+}
+ul.avatar-nav-items {
+    padding-left: 0;
+    margin: 20px 0;
+}
+
+/* Account Settings Page for Profiles */
+body.bp-user.settings #subnav {
+  border-bottom: none;
+}
+body.bp-user.settings #subnav ul li a {
+  border-right: 1px solid rgba(0,0,0,0.1);
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  border-top: 1px solid rgba(0,0,0,0.1);
+}
+#buddypress #settings-form .item {
+  border-color: transparent;
+  margin: 10px 0;
+  padding: 0 10px;
+}
+#buddypress #settings-form h4.padding {
+  padding-bottom: 0;
+}
+#buddypress #settings-form input.settings-input {
+   border: 1px solid rgba(0,0,0,0.1);
+}
+
+
+
+
+
+
+
+
+
+/* Activity Stream */
+
+#buddypress .activity-list li .activity-content {
+    position: relative;
+    padding: 4px 17px 17px;
+    background: #fff;
+}
+
+#buddypress .activity-list li .activity-content:before {
+	content: '';
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 15px 26.0px 15px 0;
+	border-color: transparent #ffffff transparent transparent;
+	line-height: 0px;
+	_border-color: #000000 #ffffff #000000 #000000;
+	_filter: progid:DXImageTransform.Microsoft.Chroma(color='#000000');
+	-webkit-transform:rotate(360deg);
+	position: absolute;
+	top: 13px;
+	left: -13px;
+}
+
+#buddypress .activity-list li.mini .activity-avatar img.FB_profile_pic,
+#buddypress .activity-list li.mini .activity-avatar img.avatar {
+    height: 50px;
+    margin-left: 0;
+    width: 50px;
+}
+
+#buddypress div.activity-comments ul li {
+    border-top: 1px solid #eee;
+    padding: 10px;
+    background: #fff;
+    margin-top: 5px;
+}
+
+#buddypress .profile-fields {
+	margin: 20px 0 30px 0;
+	font-size: 15px;
+}
+
+#buddypress .profile-fields tr {
+	font-size: 15px;
+	/*background: #fff;*/
+}
+
+#buddypress table.profile-fields tr td.label {
+	border-right: none;
+	display: block;
+}
+
+#buddypress table.profile-fields tr td.label,
+#buddypress table.profile-fields tr td.data {
+	color: #1e1e1e;
+	font-size: 15px;
+	background-color: transparent;
+  padding: 25px 0;
+  vertical-align: middle;
+  width: 100%;
+}
+#buddypress table.profile-fields tr.field_ref_link td {
+  padding: 0 8px 20px;
+}
+#buddypress table.profile-fields tr.field_ref_link td.label {
+  text-align: left;
+  padding: 8px;
+}
+
+.member-content #buddypress form#whats-new-form textarea {
+    background: #fff;
+    color: #1e1e1e;
+    height: 30px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
 }
