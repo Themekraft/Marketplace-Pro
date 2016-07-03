@@ -1570,6 +1570,9 @@ ul.avatar-nav-items {
 
 
 /* Activity Stream */
+#buddypress form#whats-new-form textarea {
+    border: 1px solid #ddd;
+}
 #buddypress .activity-list li .activity-content {
     position: relative;
     padding: 4px 17px 17px;
@@ -1701,6 +1704,8 @@ ul.avatar-nav-items {
 #buddypress ul#members-list li img.avatar {
     float: none;
     margin: 10px 0;
+		width: 100px;
+    height: 100px;
 }
 #buddypress ul#members-list li div.item-title {
     width: auto;
