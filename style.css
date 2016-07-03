@@ -1264,6 +1264,22 @@ img.avatar {
 #buddypress div.item-list-tabs ul li.selected a {
   	font-weight: normal;
 }
+.bp_group #buddypress #members_search_submit,
+#buddypress .dir-search input[type="submit"] {
+    margin-left: -4px;
+    padding: 4px 12px;
+    border-radius: 0 9px 9px 0;
+    background: #f1f1f1;
+    color: #b4b4b4;
+    text-shadow: none;
+		transition: none;
+}
+.bp_group #buddypress #members_search_submit:hover,
+#buddypress .dir-search input[type="submit"]:hover {
+	background: #e7e7e7;
+	color: #a4a4a4;
+}
+
 
 
 /* BuddyPress Group Profiles */
@@ -1309,10 +1325,13 @@ img.avatar {
     margin: 2px 0;
     font-size: 100%;
 }
-/*.bp_group #buddypress span.highlight,
-.bp_group #buddypress span.activity {
-    font-size: 13px;
-}*/
+#friend-list h4 {
+    font-family: inherit;
+    font-size: 100%;
+}
+#buddypress .activity-list .activity-content .activity-header img.avatar {
+    margin: 0 5px 0px 0!important;
+}
 
 /* BuddyPress Member Profiles */
 .bp-user #item-body {
@@ -1766,14 +1785,6 @@ ul.avatar-nav-items {
 #buddypress div.dir-search input[type=text]:focus,
 #buddypress li.groups-members-search input[type=text]:focus {
     outline: none;
-}
-#buddypress .dir-search input[type="submit"] {
-    margin-left: -4px;
-    padding: 4px 12px;
-    border-radius: 0 9px 9px 0;
-    background: #f1f1f1;
-    color: #b4b4b4;
-    text-shadow: none;
 }
 /* the members list */
 #buddypress ul#members-list {
