@@ -1282,6 +1282,81 @@ img.avatar {
 
 
 
+/* BuddyPress Activity Stream */
+#buddypress form#whats-new-form {
+	  padding: 30px 20px 10px;
+	  background: #f1f1f1;
+	  margin: 20px 0 40px 0;
+}
+#buddypress form#whats-new-form #whats-new-avatar {
+    margin-left: 10px;
+}
+#buddypress form#whats-new-form p.activity-greeting {
+    line-height: 1;
+    margin-bottom: 5px;
+    margin-left: 72px;
+    font-size: 15px;
+}
+#buddypress form#whats-new-form #whats-new-content {
+    margin-left: 70px;
+    padding: 0 0 10px 0;
+}
+#buddypress form#whats-new-form textarea {
+    border: 1px solid #ddd;
+}
+#buddypress ul.activity-list {
+    border-top: none;
+}
+#buddypress ul.activity-list li {
+    border-bottom: none;
+    padding: 20px 0;
+}
+#buddypress .activity-list li .activity-content {
+    position: relative;
+    padding: 4px 17px 17px;
+    background: #fff;
+		/*box-shadow: 1px 1px 2px rgba(0,0,0,0.18);*/
+    border: 1px solid rgba(0,0,0,0.1);
+}
+/*#buddypress .activity-list li .activity-content:before {
+	content: '';
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 15px 26.0px 15px 0;
+	border-color: transparent #ffffff transparent transparent;
+	line-height: 0px;
+	_border-color: #000000 #ffffff #000000 #000000;
+	_filter: progid:DXImageTransform.Microsoft.Chroma(color='#000000');
+	-webkit-transform:rotate(360deg);
+	position: absolute;
+	top: 13px;
+	left: -13px;
+}*/
+#buddypress .activity-list li.mini .activity-avatar img.FB_profile_pic,
+#buddypress .activity-list li.mini .activity-avatar img.avatar {
+    height: 50px;
+    margin-left: 0;
+    width: 50px;
+}
+#buddypress div.activity-comments ul {
+		padding: 0;
+}
+#buddypress div.activity-comments ul li {
+    border: 1px solid rgba(0,0,0,0.1) !important;
+    padding: 15px;
+    background: #f9f9f9;
+    margin-top: 5px;
+}
+#buddypress div.activity-comments ul ul li {
+    /*border: none !important;
+		border-left: 4px solid rgba(0,0,0,0.1) !important;*/
+    padding: 15px;
+    background: #fff;
+}
+
+
+
 /* BuddyPress Group Profiles */
 .bp_group.hentry {
 	    background: #fff;
@@ -1332,6 +1407,8 @@ img.avatar {
 #buddypress .activity-list .activity-content .activity-header img.avatar {
     margin: 0 5px 0px 0!important;
 }
+
+
 
 /* BuddyPress Member Profiles */
 .bp-user #item-body {
@@ -1445,8 +1522,6 @@ img.avatar {
     display: initial;
     font-size: 13px;
 }
-
-
 .bp-user #buddypress .member-header {
   background: transparent;
 	color: #fff;
@@ -1608,8 +1683,6 @@ p.field-visibility-settings-toggle,
   padding: 5px;
 }
 
-
-
 /* Change Avatar Page */
 /* ..this is some extra CSS for the view without JS only */
 #avatar-upload {
@@ -1635,15 +1708,6 @@ p.field-visibility-settings-toggle,
   color: #666;
 }
 
-/* Fixes for the normal "Change Avatar" page */
-.bp-avatar-nav ul.avatar-nav-items li.current {
-    border-bottom-color: #f4f4f4;
-}
-ul.avatar-nav-items {
-    padding-left: 0;
-    margin: 20px 0;
-}
-
 /* Account Settings & Notifications */
 #buddypress #settings-form input.settings-input {
    border: 1px solid rgba(0,0,0,0.1);
@@ -1657,77 +1721,15 @@ ul.avatar-nav-items {
 }
 
 
-/* BuddyPress Activity Stream */
-#buddypress form#whats-new-form {
-	  padding: 30px 20px 10px;
-	  background: #f1f1f1;
-	  margin: 20px 0 40px 0;
-}
-#buddypress form#whats-new-form #whats-new-avatar {
-    margin-left: 10px;
-}
-#buddypress form#whats-new-form p.activity-greeting {
-    line-height: 1;
-    margin-bottom: 5px;
-    margin-left: 72px;
-    font-size: 15px;
-}
-#buddypress form#whats-new-form #whats-new-content {
-    margin-left: 70px;
-    padding: 0 0 10px 0;
-}
-#buddypress form#whats-new-form textarea {
-    border: 1px solid #ddd;
-}
-#buddypress ul.activity-list {
-    border-top: none;
-}
-#buddypress ul.activity-list li {
-    border-bottom: none;
-    padding: 20px 0;
-}
-#buddypress .activity-list li .activity-content {
-    position: relative;
-    padding: 4px 17px 17px;
-    background: #fff;
-		box-shadow: 1px 1px 2px rgba(0,0,0,0.18);
-    border: 1px solid rgba(0,0,0,0.1);
-}
-/*#buddypress .activity-list li .activity-content:before {
-	content: '';
-	width: 0;
-	height: 0;
-	border-style: solid;
-	border-width: 15px 26.0px 15px 0;
-	border-color: transparent #ffffff transparent transparent;
-	line-height: 0px;
-	_border-color: #000000 #ffffff #000000 #000000;
-	_filter: progid:DXImageTransform.Microsoft.Chroma(color='#000000');
-	-webkit-transform:rotate(360deg);
-	position: absolute;
-	top: 13px;
-	left: -13px;
-}*/
-#buddypress .activity-list li.mini .activity-avatar img.FB_profile_pic,
-#buddypress .activity-list li.mini .activity-avatar img.avatar {
-    height: 50px;
-    margin-left: 0;
-    width: 50px;
-}
-#buddypress div.activity-comments ul li {
-    border-top: 1px solid #eee;
-    padding: 10px;
-    background: #fff;
-    margin-top: 5px;
-}
 #buddypress .profile-fields {
 	margin: 20px 0 30px 0;
 	font-size: 15px;
 }
 #buddypress .profile-fields tr {
 	font-size: 15px;
-	/*background: #fff;*/
 }
+
+/* Profile Fields */
 #buddypress table.profile-fields tr td.label {
 	border-right: none;
 	display: block;
@@ -1750,10 +1752,10 @@ ul.avatar-nav-items {
 }
 .member-content #buddypress form#whats-new-form textarea {
     background: #fff;
-    color: #1e1e1e;
+    color: #3f3f3f;
     height: 30px;
     padding: 8px;
-    border: 1px solid #ccc;
+    border: 1px solid #ddd;
     border-radius: 3px;
 }
 
@@ -1838,6 +1840,7 @@ ul.avatar-nav-items {
     color: #767676;
     font-size: 12px;
 }
+
 
 
 
