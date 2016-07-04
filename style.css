@@ -127,10 +127,10 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"],
 .btn {
-	padding: 8px 12px;
+	border-radius: 0;
+	padding: 6px 10px;
 	margin-right: 10px;
-	border-radius: 0px;
-	font-size: 15px;
+	font-size: 13px;
 	font-weight: normal;
 	text-decoration: none;
 	text-shadow: -1px -1px 0 rgba(0,0,0,0.1);
@@ -156,7 +156,6 @@ input[type="submit"]:focus,
 }
 .btn-primary {
 	background: #419ca2;
-	padding: 10px 17px;
 	color: #fff;
 }
 .btn-primary:hover,
@@ -169,9 +168,15 @@ input[type="submit"]:focus,
 }
 .btn.btn-small {
 	font-size: 13px;
-	padding: 8px 15px;
 }
 @media (min-width: 768px) {
+	input[type="button"],
+	input[type="reset"],
+	input[type="submit"],
+	.btn {
+		padding: 8px 12px;
+		font-size: 15px;
+	}
 	.btn.btn-large {
 		font-size: 19px;
 	}
@@ -179,24 +184,24 @@ input[type="submit"]:focus,
 .pager li>a,
 .pager li>span {
 	padding: 8px 15px;
-    border-radius: 0;
-		border: 0;
-		background: #3f3f3f;
-		border: 1px solid rgba(0,0,0,0.15);
-		color: #fff;
-		text-shadow: -1px -1px 0 rgba(0,0,0,0.15);
-		font-weight: normal;
+  border-radius: 0;
+	border: 0;
+	background: #3f3f3f;
+	border: 1px solid rgba(0,0,0,0.15);
+	color: #fff;
+	text-shadow: -1px -1px 0 rgba(0,0,0,0.15);
+	font-weight: normal;
 }
 .pager li>a:hover,
 .pager li>a:focus,
 .pager li>span:hover,
 .pager li>span:focus {
-    border-radius: 0;
-		background: #555;
-		border: 1px solid rgba(0,0,0,0.2);
-		color: #fff;
-		font-weight: normal;
-		text-decoration: none;
+  border-radius: 0;
+	background: #555;
+	border: 1px solid rgba(0,0,0,0.2);
+	color: #fff;
+	font-weight: normal;
+	text-decoration: none;
 }
 
 /* Other Bootstrap elements */
@@ -204,14 +209,14 @@ input[type="submit"]:focus,
 	border-radius: 0;
 }
 .panel-footer {
-    padding: 0px 15px 15px;
-    background-color: transparent;
-    border-top: none;
-		border-radius: 0;
+  padding: 0px 15px 15px;
+  background-color: transparent;
+  border-top: none;
+	border-radius: 0;
 }
 .panel-default>.panel-heading {
-		background: #fafafa;
-		border-radius: 0;
+	background: #fafafa;
+	border-radius: 0;
 }
 
 /* Alignment */
@@ -1139,6 +1144,13 @@ html::-webkit-scrollbar { width: 0 !important }
 	}
 }
 
+/* WooCommerce Single Product Tabs & Main Content */
+.woocommerce div.product .woocommerce-tabs ul.tabs li.active {
+    background: #fbfbfb;
+    z-index: 2;
+    border-bottom-color: #fbfbfb;
+}
+
 /* WooCommerce Cart & Checkout Process */
 #shipping_method label {
     padding-left: 30px;
@@ -1157,7 +1169,6 @@ html::-webkit-scrollbar { width: 0 !important }
  *********************************************/
 
 
-
 /* BuddyPress Member Profiles */
 .buddypress.bp-user #content {
    background: #fff;
@@ -1170,9 +1181,15 @@ html::-webkit-scrollbar { width: 0 !important }
 
 /* BP Nav */
 .bp-user div#item-nav {
-    margin: 0 -15px;
-    padding: 15px 15px 0 15px;
+    margin: 0 -8px;
+    padding: 10px 0 0 0;
     background: transparent;
+}
+@media (min-width: 768px) {
+	.bp-user div#item-nav {
+			margin: 0 -15px;
+	    padding: 15px 15px 0 15px;
+	}
 }
 .bp-user #buddypress div.item-list-tabs ul li {
 		float: none;
@@ -1201,47 +1218,59 @@ html::-webkit-scrollbar { width: 0 !important }
 		color: #fff;
     opacity: 1;
     font-weight: inherit;
+		border: 1px solid rgba(0,0,0,0.1);
 }
 
 /* BP Subnav */
-.bp-user #buddypress div.item-list-tabs#subnav {
-    margin: 0 -15px 30px;
-    overflow: hidden;
-    padding: 15px 15px 0 15px;
-		background: transparent;
-}
-.bp-user #buddypress div.item-list-tabs#subnav {
-		background: #e7e7e7;
-}
 .bp-user #buddypress #subnav ul li {
 		float: left;
 		width: auto;
 }
 .bp-user #buddypress #subnav ul li a {
-		margin-bottom: 0;
-		padding: 10px;
-		border-radius: 0;
-    background-color: transparent;
-    opacity: 1;
-    font-weight: inherit;
-		color: #3f3f3f;
-		font-size: 15px;
-}
-.bp-user #buddypress #subnav ul li a:hover,
-.bp-user #buddypress #subnav ul li a:focus {
-    background-color: #f1f1f1;
-    color: #3f3f3f;
-    opacity: 1;
-    font-weight: inherit;
-}
-.bp-user #buddypress #subnav ul li.current a,
-.bp-user #buddypress #subnav ul li.selected a {
-    background-color: #f9f9f9;
-    color: #3f3f3f;
-    opacity: 1;
-    font-weight: inherit;
+		border-radius: 3px;
+		padding: 4px 8px 4px 0;
+		background-color: transparent;
+		opacity: 1;
+		font-weight: inherit;
+		font-size: 13px;
 }
 
+
+@media (min-width: 768px) {
+	.bp-user #buddypress div.item-list-tabs#subnav {
+	    margin: 0 -15px 30px;
+	    overflow: hidden;
+	    padding: 15px 15px 0 15px;
+			background: transparent;
+	}
+	.bp-user #buddypress div.item-list-tabs#subnav {
+			background: #e7e7e7;
+	}
+	.bp-user #buddypress #subnav ul li a {
+			margin-bottom: 0;
+			padding: 10px;
+			border-radius: 0;
+	    background-color: transparent;
+	    opacity: 1;
+	    font-weight: inherit;
+			color: #3f3f3f;
+			font-size: 15px;
+	}
+	.bp-user #buddypress #subnav ul li a:hover,
+	.bp-user #buddypress #subnav ul li a:focus {
+	    background-color: #f1f1f1;
+	    color: #3f3f3f;
+	    opacity: 1;
+	    font-weight: inherit;
+	}
+	.bp-user #buddypress #subnav ul li.current a,
+	.bp-user #buddypress #subnav ul li.selected a {
+	    background-color: #f9f9f9;
+	    color: #3f3f3f;
+	    opacity: 1;
+	    font-weight: inherit;
+	}
+}
 
 /* BuddyPress Pages - Global Content Styles */
 #item-body {
@@ -1259,6 +1288,7 @@ img.avatar {
 #buddypress div.item-list-tabs ul li a,
 #buddypress div.item-list-tabs ul li span {
 	font-weight: normal;
+	font-size: 13px;
 }
 #buddypress div.item-list-tabs ul li.current a,
 #buddypress div.item-list-tabs ul li.selected a {
@@ -1280,6 +1310,12 @@ img.avatar {
 	color: #a4a4a4;
 }
 
+@media (min-width: 768px) {
+	#buddypress div.item-list-tabs ul li a,
+	#buddypress div.item-list-tabs ul li span {
+		font-size: 15px;
+	}
+}
 
 
 /* BuddyPress Activity Stream */
@@ -1427,15 +1463,20 @@ img.avatar {
 
 @media (min-width: 992px) {
 	.bp-user #buddypress div#item-header {
-	    margin-top: 20px;
-	    margin-bottom: 20px;
 	}
 }
 
 @media (max-width: 767px) {
+	.bp-user .main-content {
+    padding: 19px 0 0;
+	}
 	.bp-user #buddypress div#item-header {
 	    text-align: center;
 	    width: 100%;
+			min-height: 400px;
+	}
+	.bp-user #buddypress #item-header-cover-image {
+    padding: 0;
 	}
 	.bp-user #item-header-avatar {
 		width: 150px;
@@ -1450,13 +1491,38 @@ img.avatar {
 	    width: 150px;
 	    height: 150px;
 	}
-	.bp-user #buddypress div#item-header div#item-buttons {
-	    width: 260px;
-	    margin: 0 auto 40px;
-	    padding-left: 18px;
+	.bp-user div#buddypress div#item-header-cover-image h2 {
+    font-size: 24px;
+    margin: 10px 0;
 	}
-	.bp-user #buddypress div.item-list-tabs ul {
+	.bp-user #buddypress div#item-header div#item-buttons {
+		width: 320px;
+		max-width: 100%;
+		margin: 0 auto 20px;
+		padding: 0;
+	}
+	.bp-user #buddypress #item-nav ul {
 	    margin-bottom: 10px;
+	}
+	.bp-user #buddypress #item-nav ul li {
+    float: left;
+    width: auto;
+		margin-right: 2px;
+	}
+	.bp-user #buddypress #item-nav ul li a {
+		font-size: 13px;
+		border: 1px solid transparent;
+	}
+}
+@media (min-width: 768px) {
+	.bp-user #buddypress #item-header {
+    min-height: 400px;
+	}
+}
+@media (min-width: 992px) {
+	.bp-user #buddypress #item-header {
+		margin-top: 20px;
+		margin-bottom: 0;
 	}
 }
 
@@ -1467,12 +1533,21 @@ img.avatar {
 .bp-user #buddypress div#item-header a.button,
 .bp-user #buddypress div#item-header div.generic-button {
     float: none;
-    margin: 10px 1px;
+    margin: 0 1px;
     display: inline;
+}
+.bp-user #buddypress #item-header div.generic-button a {
+	border-radius: 3px;
 }
 .bp-user #buddypress #cover-image-container {
     overflow: hidden;
-    margin: -20px -15px;
+    margin: -20px -16px;
+		min-height: 400px;
+}
+@media (min-width: 768px) {
+	.bp-user #buddypress #cover-image-container {
+		margin: -20px -15px;
+	}
 }
 .bp-user #buddypress #header-cover-image {
   height: 400px;
@@ -1787,6 +1862,7 @@ p.field-visibility-settings-toggle,
 		transition: all 0.15s ease-in;
 		background: #fff;
 		width: 150px;
+		margin-bottom: 1em;
 }
 #buddypress div.dir-search input[type=text]:focus,
 #buddypress li.groups-members-search input[type=text]:focus {
@@ -1805,9 +1881,14 @@ p.field-visibility-settings-toggle,
 }
 .member-loop-grid-item {
 		float: left;
-		min-width: 180px;
+		min-width: 148px;
     text-align: center;
 		padding: 0 2px 30px;
+}
+@media (min-width: 768px) {
+	.member-loop-grid-item {
+			min-width: 180px;
+	}
 }
 .member-loop-grid-item .item {
     margin-bottom: 10px;
@@ -1827,6 +1908,7 @@ p.field-visibility-settings-toggle,
     top: auto;
     right: auto;
     text-align: center;
+		margin: 0;
 }
 
 
@@ -1858,11 +1940,10 @@ p.field-visibility-settings-toggle,
 #buddypress input[type=submit],
 #buddypress ul.button-nav li a,
 a.bp-title-button {
-	border: none;
-	padding: 8px 12px;
+	border-radius: 0;
+	padding: 6px 10px;
 	margin-right: 0;
-	border-radius: 0px;
-	font-size: 15px;
+	font-size: 13px;
 	font-weight: normal;
 	text-decoration: none;
 	text-shadow: -1px -1px 0 rgba(0,0,0,0.1);
@@ -1881,18 +1962,20 @@ a.bp-title-button {
 #buddypress input[type=button]:hover,
 #buddypress input[type=reset]:hover,
 #buddypress input[type=submit]:hover {
+	border-radius: 0;
 	background: #47a8af;
 	border: 1px solid rgba(0,0,0,0.15);
 	color: #fff;
 	box-shadow: none;
 }
-#buddypress .generic-button a {
-	font-size: 13px;
+#buddypress div.generic-button a {
+	font-size: 11px;
 	padding: 4px 8px;
 	line-height: 2.2;
 }
 #buddypress div.activity-meta a {
   line-height: 2.2;
+	font-size: 11px;
 }
 #buddypress a.button.edit {
   background: #ddd;
@@ -1911,4 +1994,25 @@ a.bp-title-button {
     font-size: 90%;
     margin-left: 2px;
     border-radius: 50%;
+}
+
+@media (min-width: 768px) {
+	#buddypress div.generic-button a {
+		font-size: 13px;
+	}
+	#buddypress div.activity-meta a {
+		font-size: 13px;
+	}
+	#buddypress .comment-reply-link,
+	#buddypress .generic-button a,
+	#buddypress a.button,
+	#buddypress button[type="submit"],
+	#buddypress input[type=button],
+	#buddypress input[type=reset],
+	#buddypress input[type=submit],
+	#buddypress ul.button-nav li a,
+	a.bp-title-button {
+		padding: 8px 12px;
+		font-size: 15px;
+	}
 }
