@@ -1333,6 +1333,10 @@ img.avatar {
 	top: 13px;
 	left: -13px;
 }*/
+#buddypress .activity-header p {
+    line-height: 1.4;
+    margin: 5px 0;
+}
 #buddypress .activity-list li.mini .activity-avatar img.FB_profile_pic,
 #buddypress .activity-list li.mini .activity-avatar img.avatar {
     height: 50px;
@@ -1885,10 +1889,15 @@ a.bp-title-button {
 #buddypress .generic-button a {
 	font-size: 13px;
 	padding: 4px 8px;
+	line-height: 2.2;
+}
+#buddypress div.activity-meta a {
+  line-height: 2.2;
 }
 #buddypress a.button.edit {
   background: #ddd;
   border: 1px solid #ccc;
+	line-height: 2.2;
 }
 /* the labels inside buttons */
 #buddypress #reply-title small a span,

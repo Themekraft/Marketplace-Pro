@@ -343,29 +343,18 @@ if ( class_exists( 'BuddyPress' ) ) {
 
 	}
 
-
-	// BuddyPress Site-Wide Activity Stream - Change Title to the Page Title used for the actual page ;)
+	// BuddyPress Site-Wide Activity Stream - Change Title to the Page Title that was setup for the actual page
 	add_filter( 'bp_get_directory_title', 'buddypress_sitewide_activity_title', 10, 2 );
 
 	function buddypress_sitewide_activity_title( $title) {
 
-	    global $post; global $bp;
-	    if ( bp_is_activity_front_page() ) {
-	        $title = $post->post_title;
-	    }
+			global $post; global $bp;
+			if ( bp_is_activity_front_page() ) {
+					$title = $post->post_title;
+			}
 
-	    return $title;
+			return $title;
 	}
-
-	//* Define the bp_directory_members_search_form callback
-	function yourthemeprefix_bp_directory_members_search_form() {
-		$search_form_html = '<form action="" method="get" id="search-members-form">
-			<label for="members_search"><input type="text" name="' . esc_attr( $query_arg ) . '" id="members_search" placeholder="'. esc_attr( $search_value ) .'" /></label>
-			<input type="submit" class="btn" id="members_search_submit" name="members_search_submit" value="' . __( 'Search', 'buddypress' ) . '" /></form>';
-	  return $search_form_html;
-	}
-	// add_filter('bp_directory_members_search_form', 'yourthemeprefix_bp_directory_members_search_form');
-
 
 
 }
