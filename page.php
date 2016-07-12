@@ -17,12 +17,18 @@ get_header(); ?>
 				<?php while ( have_posts() ) : the_post(); ?>
 
           <?php
+          if ( class_exists( 'BuddyPress' ) ) {
               // check if we are on a BuddyPress member profile
               if( bp_is_user() ) {
     					  get_template_part( 'content', 'member' );
+              // else we are on a normal page
               } else {
       					get_template_part( 'content', 'page' );
       				}
+          // default 
+          } else {
+            get_template_part( 'content', 'page' );
+          }
       		?>
 
 					<?php
