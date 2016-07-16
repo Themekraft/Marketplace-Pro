@@ -116,11 +116,6 @@ function _tk_scripts() {
 	// load bootstrap js
 	wp_enqueue_script('_tk-bootstrapjs', get_template_directory_uri().'/includes/resources/bootstrap/js/bootstrap.min.js', array('jquery') );
 
-  // load typed.js just on front-page
-  if( is_front_page() ) {
-  	wp_enqueue_script('typed-js', get_template_directory_uri().'/includes/js/typed.js', array('jquery') );
-  }
-
 	// load bootstrap wp js
 	wp_enqueue_script( '_tk-bootstrapwp', get_template_directory_uri() . '/includes/js/bootstrap-wp.js', array('jquery') );
 
@@ -166,6 +161,11 @@ require get_template_directory() . '/includes/jetpack.php';
  * Load custom WordPress nav walker.
  */
 require get_template_directory() . '/includes/bootstrap-wp-navwalker.php';
+
+/**
+ * Load the page options.
+ */
+require get_template_directory() . '/includes/admin/page-options.php';
 
 
 
