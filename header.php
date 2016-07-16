@@ -93,20 +93,25 @@
 									<span class="caret"></span>
 								</a>
 								<ul role="menu" class="dropdown-menu">
+
+									<?php do_action( 'tk_dropdown_before_profile' ); ?>
+
 									<li><a href="#" title="">My Profile</a></li>
+
 									<?php do_action( 'tk_dropdown_after_profile' ); ?>
 
 									<li><a href="#" title="">My Purchases</a></li>
 									<li><a href="#" title="">My Wishlist</a></li>
 
 									<li><a href="#" title="">Account Settings</a></li>
+									
 									<?php do_action( 'tk_dropdown_after_account_settings' ); ?>
 
 									<li class="divider"></li>
 									<li><a href="#" title="">My Store Dashboard</a></li>
 									<li><a href="#" title="">My Products</a></li>
 									<li><a href="#" title="">My Events</a></li>
-									
+
 								</ul>
 							</li>
 
