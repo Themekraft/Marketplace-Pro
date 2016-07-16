@@ -536,10 +536,11 @@ display: block;
 	background: transparent;
 	font-size: 15px;
 }
-#topnav li a:hover, #topnav li a:focus {
+#topnav li a:hover,
+#topnav li a:focus {
 	background: #f9f9f9;
   /*border-top: 3px solid;
-  padding-top: 25px;*/
+  padding-top: 21px;*/
 }
 #topnav li.active a,
 #topnav li.active a:hover,
@@ -618,7 +619,6 @@ display: block;
 		padding: 28px 25px 28px 0;
 	}
 	#topnav li a {
-		padding: 28px 25px;
 		height: 71px;
 	}
 }
@@ -629,6 +629,7 @@ display: block;
 		border: none;
 		border-top: 1px solid rgba(0,0,0,0.01);
 		background: transparent;
+		float: left;
 }
 #topnav .navbar-nav>li>.dropdown-menu::before {
 	bottom: 100%;
@@ -649,16 +650,77 @@ display: block;
 	display: block;
 	min-width: 200px;
 }
-#topnav .dropdown li a {
-    height: auto;
-    padding: 20px;
-		background: #3f3f3f;
-		color: #e7e7e7;
+#topnav .dropdown-menu li a {
+  height: auto;
+  padding: 15px 20px;
+	background: #3f3f3f;
+	color: #e7e7e7;
+	transition: all 0.08s ease-in;
 }
-#topnav .dropdown li a:hover,
-#topnav .dropdown li a:focus {
-		background: #555;
-		color: #fff;
+#topnav .dropdown-menu li a:hover,
+#topnav .dropdown-menu li a:focus {
+	background: #4a4a4a;
+	color: #fff;
+	border-top: none;
+	padding: 15px 20px;
+}
+
+/* The Extra Icon Nav */
+#topnav .tk-extra-nav li a {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+#topnav .tk-extra-nav li a:hover,
+#topnav .tk-extra-nav li a:focus {
+	/*padding-top: 21px;
+	border-top: 3px solid transparent;*/
+	/*color: #888;*/
+}
+#topnav .tk-extra-nav li a.tk-profile img {
+		width: 40px;
+		height: 40px;
+}
+#topnav .tk-extra-nav li a.tk-profile {
+    padding-top: 15px;
+		padding-right: 15px;
+}
+#topnav .tk-marker {
+	width: auto;
+	height: auto;
+	font-size: 10px;
+	line-height: 1;
+	padding: 1px 3px;
+	text-align: center;
+	border-radius: 50%;
+	background: transparent;
+	color: #fff;
+	display: none;
+	position: absolute;
+	top: 18px;
+	right: 8px;
+}
+#topnav .tk-notifications .tk-marker {
+	right: 12px;
+}
+#topnav .tk-marker.new {
+	background: #ff2048;
+	display: inline-block;
+}
+#topnav .tk-extra-nav.navbar-nav>li>.dropdown-menu {
+    left: -108px;
+}
+#topnav .tk-extra-nav.navbar-nav>li>.dropdown-menu::before {
+	bottom: 100%;
+	margin-left: 0;
+	right: 45px;
+	left: auto;
+}
+#topnav .tk-extra-nav .dropdown-menu .divider {
+	height: 1px;
+	border: 0;
+	margin: 0;
+	padding: 0;
+	background: #333;
 }
 
 

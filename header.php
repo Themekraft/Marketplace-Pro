@@ -57,6 +57,57 @@
 
 				<div class="tk-menu-group">
 
+					<!-- The TK Icon Nav - large screens -->
+					<ul class="tk-extra-nav navbar-nav nav">
+
+						<?php if ( class_exists( 'BuddyPress' ) ) { ?>
+
+							<?php global $bp; ?>
+
+							<li>
+								<a class="tk-notifications" href="<?php bp_loggedin_user_link(); ?>notifications">
+									<i class="fa fa-bell"></i>
+									<span class="tk-marker <?php if ( bp_has_notifications() ) { echo ' new '; } ?>">+</span>
+								</a>
+							</li>
+
+						<?php } ?>
+
+						<?php if ( class_exists( 'WooCommerce' ) ) { ?>
+
+							<?php global $woocommerce; ?>
+
+							<li>
+								<a class="tk-cart" href="<?php echo $woocommerce->cart->get_cart_url(); ?>">
+									<i class="fa fa-shopping-cart" style="font-size: 18px;"></i>
+									<span class="tk-marker <?php if ( WC()->cart->get_cart_contents_count() != 0 ) { echo ' new '; } ?>">+</span>
+								</a>
+							</li>
+						<?php } ?>
+
+						<?php if ( class_exists( 'BuddyPress' ) ) { ?>
+
+							<li class="menu-item-has-children dropdown">
+								<a class="tk-profile dropdown-toggle" href="<?php bp_loggedin_user_link(); ?>" data-toggle="dropdown" aria-haspopup="true">
+									<?php bp_loggedin_user_avatar( 'type=full' ); ?>
+									<span class="caret"></span>
+								</a>
+								<ul role="menu" class="dropdown-menu">
+									<li><a href="#" title="">My Profile</a></li>
+									<li><a href="#" title="">My Purchases</a></li>
+									<li><a href="#" title="">My Wishlist</a></li>
+									<li><a href="#" title="">Account Settings</a></li>
+									<li class="divider"></li>
+									<li><a href="#" title="">My Store Dashboard</a></li>
+									<li><a href="#" title="">My Products</a></li>
+									<li><a href="#" title="">My Events</a></li>
+								</ul>
+							</li>
+
+						<?php } ?>
+
+					</ul>
+
 					<!-- The Primary Nav - Top Nav -->
 					<?php wp_nav_menu(
 						array(
