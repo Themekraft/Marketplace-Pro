@@ -90,7 +90,6 @@
 							<li class="menu-item-has-children dropdown">
 								<a class="tk-profile dropdown-toggle" href="<?php bp_loggedin_user_link(); ?>" data-toggle="dropdown" aria-haspopup="true">
 									<?php bp_loggedin_user_avatar( 'type=full' ); ?>
-									<span class="caret"></span>
 								</a>
 								<ul role="menu" class="dropdown-menu">
 
@@ -104,13 +103,13 @@
 									<li><a href="#" title="">My Wishlist</a></li>
 
 									<li><a href="#" title="">Account Settings</a></li>
-									
+
 									<?php do_action( 'tk_dropdown_after_account_settings' ); ?>
 
-									<li class="divider"></li>
-									<li><a href="#" title="">My Store Dashboard</a></li>
-									<li><a href="#" title="">My Products</a></li>
-									<li><a href="#" title="">My Events</a></li>
+									<!-- <li class="divider"></li> -->
+									<li><a href="#" class="lighter" title="">My Store Dashboard</a></li>
+									<li><a href="#" class="lighter" title="">My Products</a></li>
+									<li><a href="#" class="lighter" title="">My Events</a></li>
 
 								</ul>
 							</li>

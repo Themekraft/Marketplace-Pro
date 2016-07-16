@@ -642,25 +642,26 @@ display: block;
 	position: absolute;
 	pointer-events: none;
 	border-color: rgba(136, 183, 213, 0);
-	border-bottom-color: #3f3f3f;
+	border-bottom-color: #414141;
 	border-width: 6px;
 	margin-left: -50px;
 }
-#topnav .navbar-nav>li:hover>.dropdown-menu {
+#topnav .navbar-nav>li:hover>.dropdown-menu,
+#topnav .open .dropdown-menu {
 	display: block;
 	min-width: 200px;
 }
 #topnav .dropdown-menu li a {
   height: auto;
   padding: 15px 20px;
-	background: #3f3f3f;
-	color: #e7e7e7;
+	background: #414141;
+	color: #aaa;
 	transition: all 0.08s ease-in;
 }
 #topnav .dropdown-menu li a:hover,
 #topnav .dropdown-menu li a:focus {
-	background: #4a4a4a;
-	color: #fff;
+	background: #4f4f4f;
+	color: #bbb;
 	border-top: none;
 	padding: 15px 20px;
 }
@@ -682,6 +683,7 @@ display: block;
 }
 #topnav .tk-extra-nav li a.tk-profile {
     padding-top: 15px;
+		padding-left: 15px;
 		padding-right: 15px;
 }
 #topnav .tk-marker {
@@ -705,6 +707,15 @@ display: block;
 #topnav .tk-marker.new {
 	background: #ff2048;
 	display: inline-block;
+}
+#topnav .dropdown-menu li a.lighter {
+    background: #383838;
+		color: #aaa;
+}
+#topnav .dropdown-menu li a.lighter:hover,
+#topnav .dropdown-menu li a.lighter:focus {
+    background: #4f4f4f;
+		color: #bbb;
 }
 #topnav .tk-extra-nav.navbar-nav>li>.dropdown-menu {
     left: -108px;
