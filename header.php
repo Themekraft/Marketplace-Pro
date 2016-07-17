@@ -31,6 +31,15 @@
 
 <div id="slidenav-wrap">
 
+	<div class="slidenav-welcome">
+		<p class="slidenav-avatar">
+			<a href="<?php bp_loggedin_user_link(); ?>">
+				<?php bp_loggedin_user_avatar( 'type=full' ); ?>
+				<span class="slidenav-profile-link"><?php echo bp_core_get_user_displayname( bp_loggedin_user_id() ); ?></span>
+			</a>
+		</p>
+	</div>
+
 	<!-- The Slide Nav -->
 	<?php wp_nav_menu(
 		array(
@@ -57,65 +66,72 @@
 
 				<div class="tk-menu-group">
 
-					<!-- The TK Icon Nav - large screens -->
-					<ul class="tk-extra-nav navbar-nav nav">
 
-						<?php if ( class_exists( 'BuddyPress' ) ) { ?>
+					<?php if ( class_exists( 'BuddyPress' ) || class_exists( 'WooCommerce' ) ) { ?>
 
-							<?php global $bp; ?>
+						<!-- The TK Icon Nav - large screens -->
+						<ul class="tk-extra-nav navbar-nav nav">
 
-							<li>
-								<a class="tk-notifications" href="<?php bp_loggedin_user_link(); ?>notifications">
-									<i class="fa fa-bell"></i>
-									<span class="tk-marker <?php if ( bp_has_notifications() ) { echo ' new '; } ?>"></span>
-								</a>
-							</li>
+							<?php if ( class_exists( 'BuddyPress' ) ) { ?>
 
-						<?php } ?>
+								<?php global $bp; ?>
 
-						<?php if ( class_exists( 'WooCommerce' ) ) { ?>
+								<li class="tk-notifications-li">
+									<a class="tk-notifications" href="<?php bp_loggedin_user_link(); ?>notifications">
+										<i class="fa fa-bell"></i>
+										<span class="tk-marker <?php if ( bp_has_notifications() ) { echo ' new '; } ?>"></span>
+									</a>
+								</li>
 
-							<?php global $woocommerce; ?>
+							<?php } ?>
 
-							<li>
-								<a class="tk-cart" href="<?php echo $woocommerce->cart->get_cart_url(); ?>">
-									<i class="fa fa-shopping-cart" style="font-size: 18px;"></i>
-									<span class="tk-marker <?php if ( WC()->cart->get_cart_contents_count() != 0 ) { echo ' new '; } ?>"></span>
-								</a>
-							</li>
-						<?php } ?>
+							<?php if ( class_exists( 'WooCommerce' ) ) { ?>
 
-						<?php if ( class_exists( 'BuddyPress' ) ) { ?>
+								<?php global $woocommerce; ?>
 
-							<li class="menu-item-has-children dropdown">
-								<a class="tk-profile dropdown-toggle" href="<?php bp_loggedin_user_link(); ?>" data-toggle="dropdown" aria-haspopup="true">
-									<?php bp_loggedin_user_avatar( 'type=full' ); ?>
-								</a>
-								<ul role="menu" class="dropdown-menu">
+								<li class="tk-cart-li">
+									<a class="tk-cart" href="<?php echo $woocommerce->cart->get_cart_url(); ?>">
+										<i class="fa fa-shopping-cart"></i>
+										<span class="tk-marker <?php if ( WC()->cart->get_cart_contents_count() != 0 ) { echo ' new '; } ?>"></span>
+									</a>
+								</li>
+							<?php } ?>
 
-									<?php do_action( 'tk_dropdown_before_profile' ); ?>
+							<?php if ( class_exists( 'BuddyPress' ) ) { ?>
 
-									<li><a href="#" title="">My Profile</a></li>
+								<li class="tk-profile-li menu-item-has-children dropdown">
+									<a class="tk-profile dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true">
+										<?php bp_loggedin_user_avatar( 'type=full' ); ?>
+									</a>
+									<ul role="menu" class="dropdown-menu">
 
-									<?php do_action( 'tk_dropdown_after_profile' ); ?>
+										<?php do_action( 'tk_dropdown_before_profile' ); ?>
 
-									<li><a href="#" title="">My Store Dashboard</a></li>
+										<li><a href="<?php bp_loggedin_user_link(); ?>" title="">My Profile</a></li>
 
-									<li><a href="#" title="">Account Settings</a></li>
+										<?php do_action( 'tk_dropdown_after_profile' ); ?>
 
-									<?php do_action( 'tk_dropdown_after_account_settings' ); ?>
+										<li><a href="#" title="">My Store Dashboard</a></li>
 
-									<!-- <li class="divider"></li> -->
-									<li><a href="#" class="lighter" title="">My Purchases</a></li>
-									<li><a href="#" class="lighter" title="">My Products</a></li>
-									<li><a href="#" class="lighter" title="">My Events</a></li>
+										<li><a href="<?php bp_loggedin_user_link(); ?>settings" title="">Account Settings</a></li>
 
-								</ul>
-							</li>
+										<?php do_action( 'tk_dropdown_after_account_settings' ); ?>
 
-						<?php } ?>
+										<!-- <li class="divider"></li> -->
+										<li><a href="#" class="lighter" title="">My Purchases</a></li>
+										<li><a href="#" class="lighter" title="">My Products</a></li>
+										<li><a href="#" class="lighter" title="">My Events</a></li>
 
-					</ul>
+									</ul>
+								</li>
+
+							<?php } ?>
+
+						</ul>
+
+					<?php } ?>
+
+
 
 					<!-- The Primary Nav - Top Nav -->
 					<?php wp_nav_menu(
@@ -131,6 +147,8 @@
 						)
 					); ?>
 
+
+
 				</div>
 
 			</div>
@@ -138,9 +156,9 @@
 	</div>
 
 
-	<div class="tk-icon-nav">
+	<!-- <div class="tk-icon-nav">
 		<a class="tk-cart-nav" href="#"><i class="fa fa-shopping-cart"></i></a>
-	</div>
+	</div> -->
 
 	<a class="tf-burger"><span></span></a>
 
