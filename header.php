@@ -67,7 +67,7 @@
 							<li>
 								<a class="tk-notifications" href="<?php bp_loggedin_user_link(); ?>notifications">
 									<i class="fa fa-bell"></i>
-									<span class="tk-marker <?php if ( bp_has_notifications() ) { echo ' new '; } ?>">+</span>
+									<span class="tk-marker <?php if ( bp_has_notifications() ) { echo ' new '; } ?>"></span>
 								</a>
 							</li>
 
@@ -80,7 +80,7 @@
 							<li>
 								<a class="tk-cart" href="<?php echo $woocommerce->cart->get_cart_url(); ?>">
 									<i class="fa fa-shopping-cart" style="font-size: 18px;"></i>
-									<span class="tk-marker <?php if ( WC()->cart->get_cart_contents_count() != 0 ) { echo ' new '; } ?>">+</span>
+									<span class="tk-marker <?php if ( WC()->cart->get_cart_contents_count() != 0 ) { echo ' new '; } ?>"></span>
 								</a>
 							</li>
 						<?php } ?>
@@ -99,15 +99,14 @@
 
 									<?php do_action( 'tk_dropdown_after_profile' ); ?>
 
-									<li><a href="#" title="">My Purchases</a></li>
-									<li><a href="#" title="">My Wishlist</a></li>
+									<li><a href="#" title="">My Store Dashboard</a></li>
 
 									<li><a href="#" title="">Account Settings</a></li>
 
 									<?php do_action( 'tk_dropdown_after_account_settings' ); ?>
 
 									<!-- <li class="divider"></li> -->
-									<li><a href="#" class="lighter" title="">My Store Dashboard</a></li>
+									<li><a href="#" class="lighter" title="">My Purchases</a></li>
 									<li><a href="#" class="lighter" title="">My Products</a></li>
 									<li><a href="#" class="lighter" title="">My Events</a></li>
 

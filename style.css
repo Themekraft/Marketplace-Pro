@@ -527,14 +527,14 @@ display: block;
 	float: right;
 }
 #topnav li a {
-	padding: 24px 20px;
+	padding: 27px 17px;
 	line-height: 1;
 	height: 58px;
 	font-weight: normal;
-	text-transform: capitalize;
+	text-transform: none;
 	color: inherit;
 	background: transparent;
-	font-size: 15px;
+	font-size: 14px;
 }
 #topnav li a:hover,
 #topnav li a:focus {
@@ -633,7 +633,7 @@ display: block;
 }
 #topnav .navbar-nav>li>.dropdown-menu::before {
 	bottom: 100%;
-	left: 50%;
+	left: 25px;
 	top: 4px;
 	border: solid transparent;
 	content: " ";
@@ -644,7 +644,6 @@ display: block;
 	border-color: rgba(136, 183, 213, 0);
 	border-bottom-color: #414141;
 	border-width: 6px;
-	margin-left: -50px;
 }
 #topnav .navbar-nav>li:hover>.dropdown-menu,
 #topnav .open .dropdown-menu {
@@ -655,21 +654,20 @@ display: block;
   height: auto;
   padding: 15px 20px;
 	background: #414141;
-	color: #aaa;
+	color: #bbb;
 	transition: all 0.08s ease-in;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
 }
 #topnav .dropdown-menu li a:hover,
 #topnav .dropdown-menu li a:focus {
 	background: #4f4f4f;
-	color: #bbb;
+	color: #eee;
 	border-top: none;
 	padding: 15px 20px;
 }
 
 /* The Extra Icon Nav */
 #topnav .tk-extra-nav li a {
-	padding-left: 20px;
-	padding-right: 20px;
 }
 #topnav .tk-extra-nav li a:hover,
 #topnav .tk-extra-nav li a:focus {
@@ -683,26 +681,24 @@ display: block;
 }
 #topnav .tk-extra-nav li a.tk-profile {
     padding-top: 15px;
-		padding-left: 15px;
-		padding-right: 15px;
 }
 #topnav .tk-marker {
-	width: auto;
-	height: auto;
+	width: 6px;
+	height: 6px;
 	font-size: 10px;
 	line-height: 1;
-	padding: 1px 3px;
+	padding: 0;
 	text-align: center;
 	border-radius: 50%;
 	background: transparent;
 	color: #fff;
 	display: none;
 	position: absolute;
-	top: 18px;
-	right: 8px;
+	top: 23px;
+	right: 10px;
 }
 #topnav .tk-notifications .tk-marker {
-	right: 12px;
+	right: 14px;
 }
 #topnav .tk-marker.new {
 	background: #ff2048;
@@ -710,20 +706,19 @@ display: block;
 }
 #topnav .dropdown-menu li a.lighter {
     background: #383838;
-		color: #aaa;
+		color: #bfbfbf;
 }
 #topnav .dropdown-menu li a.lighter:hover,
 #topnav .dropdown-menu li a.lighter:focus {
     background: #4f4f4f;
-		color: #bbb;
+		color: #fafafa;
 }
 #topnav .tk-extra-nav.navbar-nav>li>.dropdown-menu {
     left: -108px;
 }
 #topnav .tk-extra-nav.navbar-nav>li>.dropdown-menu::before {
 	bottom: 100%;
-	margin-left: 0;
-	right: 45px;
+	right: 50px;
 	left: auto;
 }
 #topnav .tk-extra-nav .dropdown-menu .divider {
