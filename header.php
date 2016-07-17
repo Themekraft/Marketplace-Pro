@@ -34,7 +34,7 @@
 	<?php if ( class_exists( 'BuddyPress' ) ) { ?>
 		<div class="slidenav-welcome">
 			<p class="slidenav-avatar">
-				<a href="<?php bp_loggedin_user_link(); ?>">
+				<a href="<?php bp_loggedin_user_link(); ?>" title="<?php echo bp_core_get_user_displayname( bp_loggedin_user_id() ); ?>">
 					<?php bp_loggedin_user_avatar( 'type=full' ); ?>
 					<span class="slidenav-profile-link">
 						<?php do_action( 'slidenav_avatar_before_username' ); ?>
