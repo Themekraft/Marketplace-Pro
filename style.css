@@ -683,7 +683,7 @@ display: block;
   right: 9px;
 }
 #topnav .tk-marker.new {
-  background: #ff2048;
+  background: #f16547;
   display: inline-block;
 }
 #topnav .tk-extra-nav .tk-profile-li {
@@ -832,7 +832,7 @@ display: block;
 #slidenav-wrap .nav > li:first-child a,
 #slidenav-wrap .nav > li:first-child a:hover,
 #slidenav-wrap .nav > li:first-child a:focus {
-	border-top: none;
+	/*border-top: none;*/
 }
 #slidenav-wrap li.menu-item a .fa {
     vertical-align: middle;
