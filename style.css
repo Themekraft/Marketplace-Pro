@@ -4,7 +4,7 @@ Theme URI: http://themekraft.com
 Author: Konrad Sroka
 Author URI: http://konradsroka.com
 Description: A clean starter theme for WooCommerce & BuddyPress. Another tool by ThemeKraft.
-Version: 0.1.1
+Version: 0.1.2
 License: GNU General Public License v3.0 /
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Tags: coffee, surf
@@ -550,7 +550,12 @@ display: block;
 #topnav li.active a,
 #topnav li.active a:hover,
 #topnav li.active a:focus {
-    background: #f9f9f9;
+  background: #f9f9f9;
+}
+#topnav li.menu-item a .fa {
+  line-height: 12px;
+  vertical-align: bottom;
+  padding-left: 2px;
 }
 .navbar-brand {
 	color: inherit;
@@ -828,6 +833,10 @@ display: block;
 #slidenav-wrap .nav > li:first-child a:hover,
 #slidenav-wrap .nav > li:first-child a:focus {
 	border-top: none;
+}
+#slidenav-wrap li.menu-item a .fa {
+    vertical-align: middle;
+    padding-left: 2px;
 }
 #slidenav-wrap .nav li .dropdown-menu {
 	padding: 0;
@@ -1538,23 +1547,38 @@ img.avatar {
 	left: -13px;
 }*/
 #buddypress .activity-header p {
-    line-height: 1.4;
-    margin: 5px 0;
+  line-height: 1.4;
+  margin: 5px 0;
 }
 #buddypress .activity-list li.mini .activity-avatar img.FB_profile_pic,
 #buddypress .activity-list li.mini .activity-avatar img.avatar {
-    height: 50px;
-    margin-left: 0;
-    width: 50px;
+  height: 50px;
+  margin-left: 0;
+  width: 50px;
 }
-#buddypress div.activity-comments ul {
-		padding: 0;
+#buddypress a.activity-time-since {
+	font-weight: normal;
+	color: #aaa;
+}
+#buddypress div.activity-comments div.acomment-content {
+	margin: 5px 0 0 35px;
+	padding: 5px 0;
+}
+#buddypress .acomment-options {
+  margin: 5px 0 0 35px;
+}
+#buddypress .activity div.activity-comments ul {
+	padding-left: 0;
+}
+#buddypress .activity div.activity-comments ul li>ul {
+  padding-top: 10px;
+  padding-left: 5px;
 }
 #buddypress div.activity-comments ul li {
-    border: 1px solid rgba(0,0,0,0.1) !important;
-    padding: 15px;
-    background: #f9f9f9;
-    margin-top: 5px;
+  border: 1px solid rgba(0,0,0,0.1) !important;
+  padding: 15px;
+  background: #f9f9f9;
+  margin-top: 5px;
 }
 #buddypress div.activity-comments ul ul li {
     /*border: none !important;
