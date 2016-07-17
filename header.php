@@ -31,14 +31,19 @@
 
 <div id="slidenav-wrap">
 
-	<div class="slidenav-welcome">
-		<p class="slidenav-avatar">
-			<a href="<?php bp_loggedin_user_link(); ?>">
-				<?php bp_loggedin_user_avatar( 'type=full' ); ?>
-				<span class="slidenav-profile-link"><?php echo bp_core_get_user_displayname( bp_loggedin_user_id() ); ?></span>
-			</a>
-		</p>
-	</div>
+	<?php if ( class_exists( 'BuddyPress' ) ) { ?>
+		<div class="slidenav-welcome">
+			<p class="slidenav-avatar">
+				<a href="<?php bp_loggedin_user_link(); ?>">
+					<?php bp_loggedin_user_avatar( 'type=full' ); ?>
+					<span class="slidenav-profile-link">
+						<?php do_action( 'slidenav_avatar_before_username' ); ?>
+						<?php echo bp_core_get_user_displayname( bp_loggedin_user_id() ); ?>
+					</span>
+				</a>
+			</p>
+		</div>
+	<?php } ?>
 
 	<!-- The Slide Nav -->
 	<?php wp_nav_menu(
