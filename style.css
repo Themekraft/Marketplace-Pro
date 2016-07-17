@@ -808,33 +808,33 @@ display: block;
 	float: none;
 	width: 100%;
 }
-#slidenav-wrap .nav li a {
+#slidenav-wrap .nav li a,
+#slidenav-wrap .nav .open>a {
 	color: #b3b3b3;
-	padding: 13px 20px;
+	padding: 15px 20px;
+	background: #282828;
 	border-bottom: 1px solid #222;
 	border-top: 1px solid #2f2f2f;
 	font-size: 13px;
 }
-/* for Font Awesome icons in sliding nav
-#slidenav-wrap .nav li a::before {
-	display: inline-block;
-	font: normal normal normal 14px/1 FontAwesome;
-	font-size: inherit;
-	text-rendering: auto;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-}*/
 #slidenav-wrap .nav li a:hover,
 #slidenav-wrap .nav li a:focus {
 	color: #dfdfdf;
-	background: #0f0f0f;
+	background: #181818;
 	border-bottom: 1px solid #141414;
-	border-top: 1px solid #000;
+	border-top: 1px solid #141414;
 }
 #slidenav-wrap .nav > li:first-child a,
 #slidenav-wrap .nav > li:first-child a:hover,
 #slidenav-wrap .nav > li:first-child a:focus {
 	border-top: none;
+}
+#slidenav-wrap .nav li .dropdown-menu {
+	padding: 0;
+}
+#slidenav-wrap .nav li .dropdown-menu a,
+#slidenav-wrap .nav .open .dropdown-menu a {
+	padding-left: 40px;
 }
 #sitewrap {
 	background: #fbfbfb;
