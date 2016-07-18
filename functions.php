@@ -166,6 +166,7 @@ require get_template_directory() . '/includes/bootstrap-wp-navwalker.php';
  * Load the page options.
  */
 require get_template_directory() . '/includes/admin/page-options.php';
+require get_template_directory() . '/includes/admin/customizer-options.php';
 
 
 
