@@ -4,7 +4,7 @@ Theme URI: http://themekraft.com
 Author: Konrad Sroka
 Author URI: http://konradsroka.com
 Description: A clean starter theme for WooCommerce & BuddyPress. Another tool by ThemeKraft.
-Version: 0.1.1
+Version: 0.1.2
 License: GNU General Public License v3.0 /
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Tags: coffee, surf
@@ -523,13 +523,18 @@ display: block;
 	-webkit-transition: -webkit-transform .25s ease-out;
 	transition: transform .25s ease-out;
 }
+#topnav.tf-open {
+	-webkit-transform: translateX(-256px);
+	-ms-transform: translateX(-256px);
+	transform: translateX(-256px);
+}
 #topnav ul {
 	float: right;
 }
 #topnav li a {
 	padding: 27px 17px;
 	line-height: 1;
-	height: 58px;
+	height: 57px;
 	font-weight: normal;
 	text-transform: none;
 	color: inherit;
@@ -545,7 +550,12 @@ display: block;
 #topnav li.active a,
 #topnav li.active a:hover,
 #topnav li.active a:focus {
-    background: #f9f9f9;
+  background: #f9f9f9;
+}
+#topnav li.menu-item a .fa {
+  line-height: 12px;
+  vertical-align: bottom;
+  padding-left: 2px;
 }
 .navbar-brand {
 	color: inherit;
@@ -559,62 +569,18 @@ display: block;
 #topnav .navbar-brand {
 	padding: 20px 20px 20px 0;
 }
-/*#topnav li a[title="Cart"]::before {
-	display: inline-block;
-	font: normal normal normal 14px/1 FontAwesome;
-	font-size: inherit;
-	text-rendering: auto;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	content: "\f07a";
-	margin-right: 5px;
-}*/
-.tk-menu-group {
+#topnav #main-menu {
 	display: none;
-}
-#topnav.tf-open {
-	-webkit-transform: translateX(-256px);
-	-ms-transform: translateX(-256px);
-	transform: translateX(-256px);
-}
-.tk-icon-nav {
-  position: absolute;
-  top: 0;
-  height: 58px;
-  width: auto;
-	min-width: 150px;
-  text-align: right;
-  vertical-align: middle;
-  right: 56px;
-}
-.tk-icon-nav a:hover,
-.tk-icon-nav a:focus {
-	color: inherit;
-}
-.tk-icon-nav a {
-  padding: 12px 10px;
-	float: right;
-	color: inherit;
-  font-size: 24px;
-	cursor: pointer;
-	text-align: center;
-	vertical-align: middle;
-}
-.tk-icon-nav .tk-profile-nav {
-	font-size: 22px;
-	padding-top: 14px;
 }
 
 @media (min-width: 992px) {
 	#topnav {
 		height: 72px;
 	}
-	.tk-menu-group {
-		display: block;
-	}
-	.tk-icon-nav {
-		display: none;
-	}
+	#topnav #main-menu,
+  .tk-extra-nav .tk-profile {
+  	display: block;
+  }
 	#topnav .navbar-brand {
 		padding: 28px 25px 28px 0;
 	}
@@ -650,7 +616,7 @@ display: block;
 	display: block;
 	min-width: 200px;
 }
-#topnav .dropdown-menu li a {
+#topnav ul.dropdown-menu li a {
   height: auto;
   padding: 15px 20px;
 	background: #414141;
@@ -658,75 +624,139 @@ display: block;
 	transition: all 0.08s ease-in;
   text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
 }
-#topnav .dropdown-menu li a:hover,
-#topnav .dropdown-menu li a:focus {
+#topnav ul.dropdown-menu li a:hover,
+#topnav ul.dropdown-menu li a:focus {
 	background: #4f4f4f;
 	color: #eee;
 	border-top: none;
 	padding: 15px 20px;
 }
 
-/* The Extra Icon Nav */
+
+
+/* The Extra TK Icon Nav */
+#topnav .tk-extra-nav {
+  position: fixed;
+  top: 0;
+  height: 58px;
+  width: 95px;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  vertical-align: middle;
+  right: 62px;
+}
+#topnav .tk-extra-nav li {
+  display: block;
+  float: left;
+}
 #topnav .tk-extra-nav li a {
+  padding: 18px 12px;
+  font-size: 19px;
 }
 #topnav .tk-extra-nav li a:hover,
 #topnav .tk-extra-nav li a:focus {
-	/*padding-top: 21px;
-	border-top: 3px solid transparent;*/
-	/*color: #888;*/
+	color: inherit;
+  background: transparent;
 }
-#topnav .tk-extra-nav li a.tk-profile img {
-		width: 40px;
-		height: 40px;
-}
-#topnav .tk-extra-nav li a.tk-profile {
-    padding-top: 15px;
+#topnav .tk-extra-nav li a.tk-cart {
+  padding-top: 16px;
+  font-size: 23px;
 }
 #topnav .tk-marker {
-	width: 6px;
-	height: 6px;
-	font-size: 10px;
-	line-height: 1;
-	padding: 0;
-	text-align: center;
-	border-radius: 50%;
-	background: transparent;
-	color: #fff;
-	display: none;
-	position: absolute;
-	top: 23px;
-	right: 10px;
+  width: 6px;
+  height: 6px;
+  font-size: 10px;
+  line-height: 1;
+  padding: 0;
+  text-align: center;
+  border-radius: 50%;
+  background: #ccc;
+  color: #fff;
+  display: inline-block;
+  position: absolute;
+  top: 16px;
+  right: 4px;
 }
 #topnav .tk-notifications .tk-marker {
-	right: 14px;
+  top: 16px;
+  right: 9px;
 }
 #topnav .tk-marker.new {
-	background: #ff2048;
-	display: inline-block;
+  background: #f16547;
+  display: inline-block;
 }
-#topnav .dropdown-menu li a.lighter {
-    background: #383838;
-		color: #bfbfbf;
+#topnav .tk-extra-nav .tk-profile-li {
+	display: none;
 }
-#topnav .dropdown-menu li a.lighter:hover,
-#topnav .dropdown-menu li a.lighter:focus {
-    background: #4f4f4f;
-		color: #fafafa;
-}
-#topnav .tk-extra-nav.navbar-nav>li>.dropdown-menu {
-    left: -108px;
-}
-#topnav .tk-extra-nav.navbar-nav>li>.dropdown-menu::before {
-	bottom: 100%;
-	right: 50px;
-	left: auto;
-}
-#topnav .tk-extra-nav .dropdown-menu .divider {
-	height: 1px;
-	border: 0;
-	margin: 0;
-	padding: 0;
-	background: #333;
+@media (min-width: 992px) {
+    #topnav .tk-extra-nav {
+      position: relative;
+      height: 71px;
+      width: auto;
+      float: right;
+      top: auto;
+      right: auto;
+      bottom: auto;
+      left: auto;
+    }
+    #topnav .tk-extra-nav li a {
+      padding: 27px 17px;
+      font-size: 15px;
+    }
+    #topnav .tk-extra-nav li a:hover,
+    #topnav .tk-extra-nav li a:focus {
+      background: #f9f9f9;
+    }
+    #topnav .tk-extra-nav li a.tk-cart {
+      padding-top: 27px;
+      font-size: 18px;
+    }
+    #topnav .tk-marker {
+      top: 26px;
+      right: 9px;
+    }
+    #topnav .tk-notifications .tk-marker {
+      top: 26px;
+      right: 13px;
+    }
+    #topnav .tk-extra-nav .dropdown-menu li {
+      float: none;
+    }
+
+    /* The TK Profile Nav (for large screens only) */
+    #topnav .tk-extra-nav .tk-profile-li {
+      display: block;
+    }
+    #topnav .tk-extra-nav li a.tk-profile {
+      padding-top: 15px;
+    }
+    #topnav .tk-extra-nav li a.tk-profile img {
+      width: 40px;
+      height: 40px;
+    }
+    #topnav ul.dropdown-menu li a.lighter {
+        background: #383838;
+    }
+    #topnav ul.dropdown-menu li a.lighter:hover,
+    #topnav ul.dropdown-menu li a.lighter:focus {
+        background: #4f4f4f;
+    }
+    #topnav .tk-extra-nav.navbar-nav>li>.dropdown-menu {
+        left: -108px;
+    }
+    #topnav .tk-extra-nav.navbar-nav>li>.dropdown-menu::before {
+    	bottom: 100%;
+    	right: 50px;
+    	left: auto;
+    }
+    #topnav .tk-extra-nav ul.dropdown-menu .divider {
+    	height: 1px;
+    	border: 0;
+    	margin: 0;
+    	padding: 0;
+    	background: #333;
+    }
 }
 
 
@@ -734,8 +764,9 @@ display: block;
 #slidenav-wrap {
 	position: fixed;
 	top: 0;
-	right: 0;
-	width: 256px;
+	right: -20px;
+	padding-right: 20px;
+	width: 276px;
 	height: 100%;
 	background: #282828;
 	z-index: 99;
@@ -745,6 +776,30 @@ display: block;
 	-webkit-transition: -webkit-transform .25s ease-out;
 	transition: transform .25s ease-out;
 	box-shadow: inset 2px 0px 2px rgba(0,0,0,0.2);
+	overflow: hidden;
+	overflow-y: scroll;
+}
+#slidenav-wrap a {
+	color: #b3b3b3;
+	text-decoration: none;
+}
+#slidenav-wrap a:hover,
+#slidenav-wrap a:focus {
+	color: #dfdfdf;
+	text-decoration: none;
+}
+.slidenav-welcome {
+	text-align: center;
+	padding: 20px;
+}
+.slidenav-welcome p {
+	margin: 0;
+}
+.slidenav-avatar img {
+	margin: 10px auto;
+	display: block;
+	width: 120px;
+	height: 120px;
 }
 #slidenav-wrap .navbar-nav {
     margin: 0;
@@ -756,33 +811,37 @@ display: block;
 	float: none;
 	width: 100%;
 }
-#slidenav-wrap .nav li a {
+#slidenav-wrap .nav li a,
+#slidenav-wrap .nav .open>a {
 	color: #b3b3b3;
-	padding: 17px 20px;
+	padding: 15px 20px;
+	background: #282828;
 	border-bottom: 1px solid #222;
 	border-top: 1px solid #2f2f2f;
-	font-size: 14px;
+	font-size: 13px;
 }
-/* for Font Awesome icons in sliding nav
-#slidenav-wrap .nav li a::before {
-	display: inline-block;
-	font: normal normal normal 14px/1 FontAwesome;
-	font-size: inherit;
-	text-rendering: auto;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-}*/
 #slidenav-wrap .nav li a:hover,
 #slidenav-wrap .nav li a:focus {
 	color: #dfdfdf;
-	background: #0f0f0f;
+	background: #181818;
 	border-bottom: 1px solid #141414;
-	border-top: 1px solid #000;
+	border-top: 1px solid #141414;
 }
 #slidenav-wrap .nav > li:first-child a,
 #slidenav-wrap .nav > li:first-child a:hover,
 #slidenav-wrap .nav > li:first-child a:focus {
-	border-top: none;
+	/*border-top: none;*/
+}
+#slidenav-wrap li.menu-item a .fa {
+    vertical-align: middle;
+    padding-left: 2px;
+}
+#slidenav-wrap .nav li .dropdown-menu {
+	padding: 0;
+}
+#slidenav-wrap .nav li .dropdown-menu a,
+#slidenav-wrap .nav .open .dropdown-menu a {
+	padding-left: 40px;
 }
 #sitewrap {
 	background: #fbfbfb;
@@ -1486,23 +1545,38 @@ img.avatar {
 	left: -13px;
 }*/
 #buddypress .activity-header p {
-    line-height: 1.4;
-    margin: 5px 0;
+  line-height: 1.4;
+  margin: 5px 0;
 }
 #buddypress .activity-list li.mini .activity-avatar img.FB_profile_pic,
 #buddypress .activity-list li.mini .activity-avatar img.avatar {
-    height: 50px;
-    margin-left: 0;
-    width: 50px;
+  height: 50px;
+  margin-left: 0;
+  width: 50px;
 }
-#buddypress div.activity-comments ul {
-		padding: 0;
+#buddypress a.activity-time-since {
+	font-weight: normal;
+	color: #aaa;
+}
+#buddypress div.activity-comments div.acomment-content {
+	margin: 5px 0 0 35px;
+	padding: 5px 0;
+}
+#buddypress .acomment-options {
+  margin: 5px 0 0 35px;
+}
+#buddypress .activity div.activity-comments ul {
+	padding-left: 0;
+}
+#buddypress .activity div.activity-comments ul li>ul {
+  padding-top: 10px;
+  padding-left: 5px;
 }
 #buddypress div.activity-comments ul li {
-    border: 1px solid rgba(0,0,0,0.1) !important;
-    padding: 15px;
-    background: #f9f9f9;
-    margin-top: 5px;
+  border: 1px solid rgba(0,0,0,0.1) !important;
+  padding: 15px;
+  background: #f9f9f9;
+  margin-top: 5px;
 }
 #buddypress div.activity-comments ul ul li {
     /*border: none !important;

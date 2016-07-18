@@ -26,11 +26,11 @@ jQuery( document ).ready( function( jQuery ) {
     });
 
     // the sliding nav
-    jQuery('#slidenav-wrap a').click(function() {
-      jQuery('#topnav').toggleClass("tf-open");
-      jQuery('#slidenav-wrap').toggleClass("tf-open");
-      jQuery('#sitewrap').toggleClass("slidenav-open");
-    });
+    // jQuery('#slidenav-wrap a').click(function() {
+    //   jQuery('#topnav').toggleClass("tf-open");
+    //   jQuery('#slidenav-wrap').toggleClass("tf-open");
+    //   jQuery('#sitewrap').toggleClass("slidenav-open");
+    // });
 
     // sliding nav - when opened, close on click anywhere within #sitewrap
     jQuery('#sitewrap').click(function() {
