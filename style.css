@@ -569,7 +569,7 @@ display: block;
 #topnav .navbar-brand {
 	padding: 20px 20px 20px 0;
 }
-.menu-top-1-container {
+#topnav #main-menu {
 	display: none;
 }
 
@@ -577,7 +577,7 @@ display: block;
 	#topnav {
 		height: 72px;
 	}
-	.menu-top-1-container,
+	#topnav #main-menu,
   .tk-extra-nav .tk-profile {
   	display: block;
   }
@@ -737,12 +737,10 @@ display: block;
     }
     #topnav ul.dropdown-menu li a.lighter {
         background: #383838;
-    		color: #bfbfbf;
     }
     #topnav ul.dropdown-menu li a.lighter:hover,
     #topnav ul.dropdown-menu li a.lighter:focus {
         background: #4f4f4f;
-    		color: #fafafa;
     }
     #topnav .tk-extra-nav.navbar-nav>li>.dropdown-menu {
         left: -108px;

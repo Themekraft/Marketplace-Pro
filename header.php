@@ -8,7 +8,7 @@
  */
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
-<head>
+<head <?php do_action( 'add_head_attributes' ); ?>>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -110,22 +110,20 @@
 									</a>
 									<ul role="menu" class="dropdown-menu">
 
-										<?php do_action( 'tk_dropdown_before_profile' ); ?>
+										<?php do_action( 'tk_dropdown_first' ); ?>
 
-										<li><a href="<?php bp_loggedin_user_link(); ?>" title="">My Profile</a></li>
-
-										<?php do_action( 'tk_dropdown_after_profile' ); ?>
-
-										<li><a href="#" title="">My Store Dashboard</a></li>
-
-										<li><a href="<?php bp_loggedin_user_link(); ?>settings" title="">Account Settings</a></li>
-
-										<?php do_action( 'tk_dropdown_after_account_settings' ); ?>
-
+										<li><a href="#" class="xlighter" title="">Sales Dashboard</a></li>
+										<li><a href="#" class="xlighter" title="">Add Product</a></li>
+										<li><a href="#" class="xlighter" title="">Add Event</a></li>
 										<!-- <li class="divider"></li> -->
-										<li><a href="#" class="lighter" title="">My Purchases</a></li>
-										<li><a href="#" class="lighter" title="">My Products</a></li>
-										<li><a href="#" class="lighter" title="">My Events</a></li>
+										<li><a href="<?php bp_loggedin_user_link(); ?>" class="lighter" title="">My Profile</a></li>
+										<li><a href="<?php bp_loggedin_user_link(); ?>settings" class="lighter" title="">Settings</a></li>
+
+										<?php do_action( 'tk_dropdown_before_logout' ); ?>
+
+										<li><a href="#" class="lighter" title="">Logout</a></li>
+
+										<?php do_action( 'tk_dropdown_last' ); ?>
 
 									</ul>
 								</li>
