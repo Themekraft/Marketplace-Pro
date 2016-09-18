@@ -1,6 +1,6 @@
 <?php
 /**
- * _tk Theme Customizer
+ * _tk Theme Customizer JS Binding
  *
  * @package _tk
  */

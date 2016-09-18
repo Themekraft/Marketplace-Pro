@@ -1,11 +1,10 @@
 <?php
 
-/**
- * Adds the individual sections, settings, and controls to the theme customizer
- */
-function mp_procustomizer( $wp_customize ) {
+// Adding the Marketplace Pro theme options to the theme customizer
+
+function mpro_customizer( $wp_customize ) {
 	$wp_customize->add_section(
-		'mp_prosection_one',
+		'mpro_section_one',
 		array(
 			'title' => 'Konrad Settings',
 			'description' => 'This is a settings section.',
@@ -22,9 +21,9 @@ function mp_procustomizer( $wp_customize ) {
 		'konrad_textbox',
 		array(
 			'label' => 'Hallo Konrad',
-			'section' => 'mp_prosection_one',
+			'section' => 'mpro_section_one',
 			'type' => 'text',
 		)
 	);
 }
-add_action( 'customize_register', 'mp_procustomizer' );
+add_action( 'customize_register', 'mpro_customizer' );
