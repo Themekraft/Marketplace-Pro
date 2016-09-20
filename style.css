@@ -1346,9 +1346,8 @@ html::-webkit-scrollbar { width: 0 !important }
 /* BuddyPress Member Profiles */
 .buddypress.bp-user #content {
    background: #fff;
-   border: 1px solid #e7e7e7;
-   box-shadow: 0px 0px 3px rgba(0,0,0,0.08);
-	 padding-bottom: 0;
+   box-shadow: 0px 0px 3px rgba(0,0,0,0.1);
+	 padding: 0;
 	 margin-bottom: 40px;
 }
 
@@ -1445,6 +1444,12 @@ html::-webkit-scrollbar { width: 0 !important }
 	    font-weight: inherit;
 	}
 }
+.tk-member-row {
+	border: 1px solid #ddd;
+	border-top: none;
+	overflow: auto;
+}
+
 
 /* BuddyPress Pages - Global Content Styles */
 #item-body {
@@ -1650,10 +1655,8 @@ img.avatar {
 .bp-user #activity-filter-select {
 	display: none;
 }
-
-@media (min-width: 992px) {
-	.bp-user #buddypress div#item-header {
-	}
+.bp-user #buddypress div#item-header {
+	margin-top: 0;
 }
 
 @media (max-width: 767px) {
@@ -1729,20 +1732,16 @@ img.avatar {
 .bp-user #buddypress #item-header div.generic-button a {
 	border-radius: 3px;
 }
-.bp-user #buddypress #cover-image-container {
-    overflow: hidden;
-    margin: -20px -16px;
-		min-height: 400px;
-}
-@media (min-width: 768px) {
-	.bp-user #buddypress #cover-image-container {
-		margin: -20px -15px;
-	}
-}
-.bp-user #buddypress #header-cover-image {
-  height: 400px;
+body.buddypress.bp-default-cover div#item-header, .bp-default-cover #buddypress div#item-header {
 	background-color: #419ca2;
 	box-shadow: inset 0 -160px 160px rgba(0,0,0,0.18);
+	margin-top: 0;
+}
+.profile-cover-action {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    z-index: 9999;
 }
 .bp-user div#buddypress div#item-header #item-header-cover-image #item-header-content {
     clear: both;

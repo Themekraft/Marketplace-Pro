@@ -15,7 +15,7 @@
 
 	</div><!-- #item-header -->
 
-	<div class="row">
+	<div class="tk-member-row">
 
 		<div id="profile-sidebar" class="col-xs-12 col-sm-3 col-lg-3">
 
