@@ -258,6 +258,11 @@ if ( class_exists( 'WooCommerce' ) ) {
     remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10);
     remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10);
 
+		// remove product meta from single products summary
+		remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40 );
+		add_action( 'tk_single_product_sidebar_meta', 'woocommerce_template_single_meta', 40 );
+
+
     // always remove sidebars
     remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10);
 

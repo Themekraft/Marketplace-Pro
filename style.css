@@ -1,8 +1,8 @@
 /*
 Theme Name: Marketplace Pro
-Theme URI: http://themekraft.com
+Theme URI: https://github.com/Themekraft/Marketplace-Pro
 Author: Konrad Sroka
-Author URI: http://konradsroka.com
+Author URI: http://themekraft.com
 Description: A clean starter theme for WooCommerce & BuddyPress. Another tool by ThemeKraft.
 Version: 0.1.2
 License: GNU General Public License v3.0 /
@@ -683,7 +683,7 @@ display: block;
   right: 9px;
 }
 #topnav .tk-marker.new {
-  background: #f16547;
+  background: #f14747;
   display: inline-block;
 }
 #topnav .tk-extra-nav .tk-profile-li {
@@ -1251,7 +1251,7 @@ html::-webkit-scrollbar { width: 0 !important }
 .woocommerce .button.wc-forward,
 .woocommerce #respond input#submit.alt {
 	border-radius: 0;
-	background: #f16547;
+	background: #f14747;
 	border: 1px solid rgba(0,0,0,0.15);
 	font-weight: normal;
 	color: #fff;
@@ -1267,7 +1267,7 @@ html::-webkit-scrollbar { width: 0 !important }
 .woocommerce .button.wc-forward:focus,
 .woocommerce #respond input#submit.alt:focus {
 	border-radius: 0;
-	background: #d2563b;
+	background: #e43a3a;
 	border: 1px solid rgba(0,0,0,0.15);
 	font-weight: normal;
 	color: #fff;
@@ -1275,20 +1275,32 @@ html::-webkit-scrollbar { width: 0 !important }
 
 /* WooCommerce Single Products */
 .single.woocommerce .quantity .qty {
-  height: 34px;
+  height: 69px;
+	margin-right: 2px;
 }
 .single.woocommerce div.product .woocommerce-tabs .panel {
 	padding: 0;
 	background: transparent;
 	box-shadow: none;
 }
-.woocommerce div.product .stock,
 .woocommerce div.product p.price,
 .woocommerce div.product span.price {
-    color: #888;
+    color: #f14747;
+		font-size: 23px;
+		margin-bottom: 20px;
+}
+.woocommerce div.product .stock,
+.woocommerce div.product p.price del,
+.woocommerce div.product span.price del {
+    color: #777;
+		font-size: initial;
+}
+.single-product div.product .summary form.cart div.quantity {
+	padding-top: 20px;
 }
 .single-product form.cart .variations td.label {
-    display: none;
+  color: inherit;
+	display: none;
 }
 .single-product form.cart .variations {
 	margin: 20px 0;
@@ -1300,11 +1312,10 @@ html::-webkit-scrollbar { width: 0 !important }
   border: 1px solid #ddd;
 }
 .single-product div.product .summary form.cart .button {
-    float: none;
-		font-size: 30px;
-	  margin: 20px 0;
-		clear: both;
-		display: block;
+    float: left;
+    font-size: 30px;
+    margin: 20px 0;
+    display: block;
 }
 .single-product div.product .summary form.cart div.quantity {
     float: left;
@@ -1313,10 +1324,36 @@ html::-webkit-scrollbar { width: 0 !important }
 
 @media (min-width: 768px) {
 	.single-product h1 {
-    font-size: 38px;
+    font-size: 28px;
     line-height: 1.4;
 	}
 }
+@media (min-width: 992px) {
+	.single-product h1 {
+    font-size: 34px;
+	}
+}
+@media (min-width: 1200px) {
+	.single-product h1 {
+    font-size: 38px;
+	}
+}
+.single-product .product_meta span.sku_wrapper,
+.single-product .product_meta span.posted_in,
+.single-product .product_meta span.tagged_as {
+	display: block;
+	padding: 5px 0;
+}
+.tk-product-meta-sidebar {
+    padding: 15px 20px;
+    background: #fff;
+    border: 1px solid #ddd;
+		font-size: 13px;
+		color: #777;
+		margin-bottom: 20px;
+}
+
+
 
 /* WooCommerce Single Product Tabs & Main Content */
 .woocommerce div.product .woocommerce-tabs ul.tabs li.active {
@@ -1345,9 +1382,7 @@ html::-webkit-scrollbar { width: 0 !important }
 
 /* BuddyPress Member Profiles */
 .buddypress.bp-user #content {
-   background: #fff;
-   box-shadow: 0px 0px 3px rgba(0,0,0,0.1);
-	 padding: 0;
+   /*box-shadow: 0px 0px 3px rgba(0,0,0,0.1);*/
 	 margin-bottom: 40px;
 }
 
