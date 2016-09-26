@@ -1477,7 +1477,7 @@ html::-webkit-scrollbar { width: 0 !important }
 
 @media (min-width: 768px) {
 	.bp-user #buddypress div.item-list-tabs#subnav {
-	    margin: 0 -15px 30px;
+	    margin: 0 0 30px;
 	    overflow: hidden;
 	    padding: 15px 15px 0 15px;
 			background: transparent;
@@ -1504,7 +1504,7 @@ html::-webkit-scrollbar { width: 0 !important }
 	}
 	.bp-user #buddypress #subnav ul li.current a,
 	.bp-user #buddypress #subnav ul li.selected a {
-	    background-color: #f9f9f9;
+	    background-color: #fbfbfb;
 	    color: #3f3f3f;
 	    opacity: 1;
 	    font-weight: inherit;
@@ -1711,7 +1711,7 @@ img.avatar {
 
 /* BuddyPress Member Profiles */
 .bp-user #item-body {
-		/*border-left: 1px solid #e7e7e7;*/
+		padding: 0;
 }
 .bp-user article.hentry {
 	margin: 0;
@@ -1928,8 +1928,8 @@ body.buddypress.bp-default-cover div#item-header, .bp-default-cover #buddypress 
     list-style: none;
     padding: 20px 10px 5px;
     margin: 30px 0;
-    background: #ddd;
-    overflow: auto;
+    background: #e7e7e7;
+    overflow: hidden;
     height: auto;
 }
 #buddypress ul.button-nav li {
@@ -1950,7 +1950,7 @@ body.buddypress.bp-default-cover div#item-header, .bp-default-cover #buddypress 
   border: none;
 }
 #buddypress ul.button-nav li.current a {
-  background: #f7f7f7;
+  background: #fbfbfb;
   border: none;
   color: initial;
 }
