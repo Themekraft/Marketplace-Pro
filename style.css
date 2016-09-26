@@ -999,10 +999,18 @@ display: block;
     margin-top: 0;
 }
 .blog .hentry {
-    padding: 20px;
+    padding: 0 15px 15px;
     background: #fff;
     border: 1px solid #ddd;
     box-shadow: 1px 1px 3px rgba(0,0,0,0.08);
+}
+.entry-content-thumbnail {
+    min-height: 300px;
+    width: 100%;
+    overflow: auto;
+}
+.single .entry-content-thumbnail {
+	margin-bottom: 30px;
 }
 .blog .entry-title {
     margin: 10px 0;

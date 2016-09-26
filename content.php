@@ -7,15 +7,14 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 	<div class="row">
-		<?php // if ( has_post_thumbnail() ) : ?>
-			<!-- <div class="col-xs-12 col-sm-4 col-md-3">
-				<div class="entry-content-thumbnail">
-					<a href="<?php the_permalink(); ?>" rel="bookmark" title="Read more"><?php the_post_thumbnail(); ?></a>
-				</div>
-			</div> -->
-		<?php // endif; ?>
+		<?php if ( has_post_thumbnail() ) : ?>
+				<a href="<?php the_permalink(); ?>" rel="bookmark" title="Read more">
+					<div class="entry-content-thumbnail" style="background: #000 url('<?php the_post_thumbnail_url(); ?>') 0 0 scroll no-repeat; background-size: cover;">
+					</div>
+				</a>
+		<?php endif; ?>
 
-		<div class="col-xs-12<?php // if ( has_post_thumbnail() ) { echo 'col-sm-8 col-md-9'; } ?>">
+		<div class="col-xs-12">
 			<?php if ( 'post' == get_post_type() ) : ?>
 			<div class="post-date entry-meta"><?php tk_posted_on(); ?></div>
 			<?php endif; ?>
@@ -45,7 +44,7 @@
 				<?php endif; // End if 'post' == get_post_type() ?>
 
 				<?php if ( ! post_password_required() && ( comments_open() || '0' != get_comments_number() ) ) : ?>
-					<span> | <small class="comments-link"><?php comments_popup_link( __( 'Leave a comment', '_tk' ), __( '1 Comment', '_tk' ), __( '% Comments', '_tk' ) ); ?></small></span>
+					<span><small class="comments-link"><?php comments_popup_link( __( 'Leave a comment', '_tk' ), __( '1 Comment', '_tk' ), __( '% Comments', '_tk' ) ); ?></small></span>
 				<?php endif; ?>
 
 				<?php // edit_post_link( __( 'Edit', '_tk' ), '<span class="edit-link">', '</span>' ); ?>
