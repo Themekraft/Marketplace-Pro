@@ -85,14 +85,14 @@ h4 { font-size: 18px; }
 }
 
 a {
-	color: #419ca2;
+	color: #09b1cc; /* #419ca2 */
 }
 a {
 	font-weight: bold;
 }
 a:hover,
 a:focus {
-	color: #47a8af;
+	color: #039bb4;  /* #47a8af; */
 	text-decoration: underline;
 }
 .sidebar ul li a,
@@ -154,12 +154,12 @@ input[type="submit"]:focus,
 	box-shadow: none;
 }
 .btn-primary {
-	background: #419ca2;
+	background: #09b1cc;
 	color: #fff;
 }
 .btn-primary:hover,
 .btn-primary:focus {
-	background: #47a8af;
+	background: #039bb4;
 	color: #fff;
 }
 .btn.btn-large {
@@ -1098,6 +1098,29 @@ display: block;
 #footer a {
 	font-weight: normal;
 }
+#footer .footer-columns .widgettitle {
+  font-size: 21px;
+  padding: 15px;
+}
+#footer .footer-columns .nav>li>a {
+	font-size: 15px;
+	padding: 7px 15px;
+}
+#footer .footer-columns .nav>li>a:hover,
+#footer .footer-columns .nav>li>a:focus {
+    /*background-color: #09b1cc;
+    color: #fff;*/
+		background-color: #f9f9f9;
+		color: #a3a3a3;
+		/*color: #039bb4;*/
+}
+@media (min-width: 1200px) {
+	#footer .footer-columns .nav>li>a:hover,
+	#footer .footer-columns .nav>li>a:focus {
+	    background-color: #f9f9f9;
+	    color: a3a3a3;
+	}
+}
 
 /* Footer Last */
 #footer-last {
@@ -1198,10 +1221,19 @@ html::-webkit-scrollbar { width: 0 !important }
     margin-bottom: 0px;
     font-size: 15px;
 }
-.woocommerce ul.products li.product a:hover *,
-.woocommerce ul.products li.product a:focus * {
+.woocommerce ul.products li.product a:hover img,
+.woocommerce ul.products li.product a:focus img {
     opacity: 0.8;
 }
+.woocommerce ul.products li.product a:hover .onsale,
+.woocommerce ul.products li.product a:focus .onsale {
+    opacity: 1;
+}
+.woocommerce ul.products li.product a .onsale {
+    opacity: 1;
+		z-index: 999;
+}
+
 @media (max-width: 768px) {
 	.woocommerce ul.products li.product,
 	.woocommerce-page ul.products li.product {
@@ -1395,8 +1427,8 @@ html::-webkit-scrollbar { width: 0 !important }
 }
 @media (min-width: 768px) {
 	.bp-user div#item-nav {
-			margin: 0 -15px;
-	    padding: 15px 15px 0 15px;
+		margin: 0 0 0 -15px;
+		padding: 15px 0;
 	}
 }
 .bp-user #buddypress div.item-list-tabs ul li {
@@ -1407,22 +1439,21 @@ html::-webkit-scrollbar { width: 0 !important }
     background-color: transparent;
     opacity: 1;
     font-weight: inherit;
-    padding: 7px 10px;
+    padding: 10px 10px;
     margin-right: 1px;
-		margin-bottom: 5px;
-		border-radius: 3px;
+		margin-bottom: 0;
 		font-size: 17px;
 }
 .bp-user #buddypress #item-nav ul li a:hover,
 .bp-user #buddypress #item-nav ul li a:focus {
-    background-color: #eaeaea;
+    background-color: #f2f2f2;
 		color: inherit;
     opacity: 1;
     font-weight: inherit;
 }
 .bp-user #buddypress #item-nav ul li.current a,
 .bp-user #buddypress #item-nav ul li.selected a {
-		background-color: #419ca2;
+		background-color: #09b1cc;
 		color: #fff;
     opacity: 1;
     font-weight: inherit;
@@ -1480,15 +1511,13 @@ html::-webkit-scrollbar { width: 0 !important }
 	}
 }
 .tk-member-row {
-	border: 1px solid #ddd;
-	border-top: none;
 	overflow: auto;
 }
 
 
 /* BuddyPress Pages - Global Content Styles */
 #item-body {
-		background: #f9f9f9;
+		background: transparent;
 		padding-bottom: 40px;
 }
 img.avatar {
@@ -1682,7 +1711,7 @@ img.avatar {
 
 /* BuddyPress Member Profiles */
 .bp-user #item-body {
-		border-left: 1px solid #e7e7e7;
+		/*border-left: 1px solid #e7e7e7;*/
 }
 .bp-user article.hentry {
 	margin: 0;
@@ -1768,7 +1797,7 @@ img.avatar {
 	border-radius: 3px;
 }
 body.buddypress.bp-default-cover div#item-header, .bp-default-cover #buddypress div#item-header {
-	background-color: #419ca2;
+	background-color: #09b1cc;
 	box-shadow: inset 0 -160px 160px rgba(0,0,0,0.18);
 	margin-top: 0;
 }
@@ -2171,7 +2200,7 @@ a.bp-title-button {
 	font-weight: normal;
 	text-decoration: none;
 	text-shadow: -1px -1px 0 rgba(0,0,0,0.1);
-	background: #419ca2;
+	background: #09b1cc;
 	border: 1px solid rgba(0,0,0,0.15);
 	color: #fff;
 	transition: all 0.08s ease-out;
@@ -2187,7 +2216,7 @@ a.bp-title-button {
 #buddypress input[type=reset]:hover,
 #buddypress input[type=submit]:hover {
 	border-radius: 0;
-	background: #47a8af;
+	background: #039bb4;
 	border: 1px solid rgba(0,0,0,0.15);
 	color: #fff;
 	box-shadow: none;

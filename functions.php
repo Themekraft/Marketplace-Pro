@@ -308,6 +308,15 @@ if ( class_exists( 'WooCommerce' ) ) {
         return $checkout_url;
     }
 
+		// Add category name to product loop item
+		// add_action( 'woocommerce_shop_loop_item_title', 'tk_add_cat_to_loop' );
+		function tk_add_cat_to_loop() {
+			global $woocommerce, $product, $post;
+			$categ = $product->get_categories();
+    	echo '<span>'.$categ.'</span>';
+
+		}
+
 }
 
 
