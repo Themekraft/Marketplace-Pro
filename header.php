@@ -77,7 +77,7 @@
 						<!-- The TK Icon Nav - large screens -->
 						<ul class="tk-extra-nav navbar-nav nav">
 
-							<?php if ( class_exists( 'BuddyPress' ) ) { ?>
+							<?php if ( class_exists( 'BuddyPress' ) && is_user_logged_in() ) { ?>
 
 								<?php global $bp; ?>
 
@@ -90,7 +90,7 @@
 
 							<?php } ?>
 
-							<?php if ( class_exists( 'WooCommerce' ) ) { ?>
+							<?php if ( class_exists( 'WooCommerce' ) && is_user_logged_in() ) { ?>
 
 								<?php global $woocommerce; ?>
 
@@ -102,7 +102,7 @@
 								</li>
 							<?php } ?>
 
-							<?php if ( class_exists( 'BuddyPress' ) ) { ?>
+							<?php if ( class_exists( 'BuddyPress' ) && is_user_logged_in() ) { ?>
 
 								<li class="tk-profile-li menu-item-has-children dropdown">
 									<a class="tk-profile dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true">

@@ -1,6 +1,6 @@
 <?php
 /**
- * The sidebar containing the main widget area
+ * The sidebar for the product single view
  *
  * @package Marketplace-Pro
  */
@@ -17,7 +17,9 @@
 
 			<?php do_action( 'before_sidebar' ); ?>
 
-					<?php if ( ! dynamic_sidebar( 'sidebar-1' ) ) : ?>
+					<?php if ( ! dynamic_sidebar( 'sidebar-product' ) ) : ?>
+						<?php if ( ! dynamic_sidebar( 'sidebar-1' ) ) : ?>
+						<?php endif; ?>
 					<?php endif; ?>
 
 		</div><!-- close .sidebar-padder -->

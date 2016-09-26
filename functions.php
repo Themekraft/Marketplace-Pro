@@ -78,13 +78,26 @@ function _tk_widgets_init() {
 
   // sidebar
 	register_sidebar( array(
-    		'name'          => __( 'Sidebar', '_tk' ),
+    		'name'          => __( 'Sidebar', 'MPro' ),
+				'description' 	=> __( 'This is the sidebar used by default.', 'MPro'),
     		'id'            => 'sidebar-1',
     		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
     		'after_widget'  => '</aside>',
     		'before_title'  => '<h3 class="widget-title">',
     		'after_title'   => '</h3>',
 	  ) );
+
+		// sidebar
+		register_sidebar( array(
+	    		'name'          => __( 'Sidebar Products', 'MPro' ),
+					'description' 	=> __( 'This is the sidebar used for the products single view.', 'MPro'),
+	    		'id'            => 'sidebar-product',
+	    		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+	    		'after_widget'  => '</aside>',
+	    		'before_title'  => '<h3 class="widget-title">',
+	    		'after_title'   => '</h3>',
+		  ) );
+
 
   // footer widgetareas
   register_sidebars( 4, array(
@@ -258,12 +271,12 @@ if ( class_exists( 'WooCommerce' ) ) {
     remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10);
     remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10);
 
-		// remove product meta from single products summary
+		/* remove product meta from single products summary */
 		remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40 );
 		add_action( 'tk_single_product_sidebar_meta', 'woocommerce_template_single_meta', 40 );
 
 
-    // always remove sidebars
+    /* always remove sidebars // sidebars added via theme templates! */
     remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10);
 
     add_action('woocommerce_before_main_content', 'tk_theme_wrapper_start', 10);

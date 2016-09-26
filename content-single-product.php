@@ -94,7 +94,7 @@ if ( ! defined( 'ABSPATH' ) ) {
         <?php do_action( 'tk_single_product_sidebar_meta' ); ?>
       </div>
 
-      <?php get_sidebar( 'single-product' ); ?>
+      <?php get_sidebar( 'product' ); ?>
 
       <?php do_action( 'tk_single_product_sidebar_last' ); ?>
 

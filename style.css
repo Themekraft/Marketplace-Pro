@@ -2269,3 +2269,21 @@ a.bp-title-button {
 		font-size: 15px;
 	}
 }
+
+/* BuddyPress Widgets */
+
+/* Member Widget */
+.buddypress.widget #members-list .item-avatar {
+    float: left;
+}
+.buddypress.widget #members-list .item-avatar a {
+    padding: 0;
+}
+.buddypress.widget #members-list .item-title a {
+    padding: 0 0 10px 0;
+		color: #09b1cc;
+}
+.buddypress.widget #members-list .item-title a:hover,
+.buddypress.widget #members-list .item-title a:focus {
+    background: transparent;
+}
