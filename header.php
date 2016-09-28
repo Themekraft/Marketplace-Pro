@@ -121,7 +121,7 @@
 
 										<?php do_action( 'tk_dropdown_before_logout' ); ?>
 
-										<li><a href="#" class="lighter" title="">Logout</a></li>
+										<li><a href="<?php echo wp_logout_url( home_url() ); ?>" class="lighter" title="">Logout</a></li>
 
 										<?php do_action( 'tk_dropdown_last' ); ?>
 
