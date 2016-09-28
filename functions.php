@@ -59,7 +59,7 @@ function _tk_setup() {
 	load_theme_textdomain( '_tk', get_template_directory() . '/languages' );
 
 	/**
-	 * This theme uses wp_nav_menu() in two locations.
+	 * This theme uses wp_nav_menu() in three locations.
 	*/
 	register_nav_menus( array(
 		'primary'  => __( 'Header Top Menu', '_tk' ),

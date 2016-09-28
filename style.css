@@ -1,10 +1,10 @@
 /*
-Theme Name: Marketplace Pro
+Theme Name: Marketplace-Pro
 Theme URI: https://github.com/Themekraft/Marketplace-Pro
 Author: Konrad Sroka
 Author URI: http://themekraft.com
 Description: A clean starter theme for WooCommerce & BuddyPress. Another tool by ThemeKraft.
-Version: 0.1.2
+Version: 1.0 Beta
 License: GNU General Public License v3.0 /
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Tags: coffee, surf
@@ -34,7 +34,7 @@ More Credits:
 /* My Minimal WordPress Styling comes here */
 body {
 	word-wrap: break-word;
-	background: #f4f4f4;
+	background: #fbfbfb;
 	color: #3f3f3f;
 	font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
 	font-size: 17px;
@@ -844,7 +844,6 @@ display: block;
 	padding-left: 40px;
 }
 #sitewrap {
-	background: #fbfbfb;
 	-webkit-transition: -webkit-transform .25s ease-out;
 	transition: transform .25s ease-out;
 	z-index: 99;
@@ -1112,7 +1111,7 @@ display: block;
 }
 #footer .footer-columns .nav>li>a {
 	font-size: 15px;
-	padding: 7px 15px;
+	padding: 10px 15px;
 }
 #footer .footer-columns .nav>li>a:hover,
 #footer .footer-columns .nav>li>a:focus {

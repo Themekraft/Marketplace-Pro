@@ -112,9 +112,9 @@
 
 										<?php do_action( 'tk_dropdown_first' ); ?>
 
-										<li><a href="#" class="xlighter" title="">Sales Dashboard</a></li>
+										<li><a href="/vendor_dashboard/" class="xlighter" title="">Sales Dashboard</a></li>
 										<li><a href="#" class="xlighter" title="">Add Product</a></li>
-										<li><a href="#" class="xlighter" title="">Add Event</a></li>
+										<li><a href="/events/community/add" class="xlighter" title="">Add Event</a></li>
 										<!-- <li class="divider"></li> -->
 										<li><a href="<?php bp_loggedin_user_link(); ?>" class="lighter" title="">My Profile</a></li>
 										<li><a href="<?php bp_loggedin_user_link(); ?>settings" class="lighter" title="">Settings</a></li>
