@@ -112,15 +112,14 @@
 
 										<?php do_action( 'tk_dropdown_first' ); ?>
 
-										<li><a href="/vendor_dashboard/" class="xlighter" title="">Sales Dashboard</a></li>
-										<li><a href="#" class="xlighter" title="">Add Product</a></li>
-										<li><a href="/events/community/add" class="xlighter" title="">Add Event</a></li>
-										<!-- <li class="divider"></li> -->
+										<?php if( defined('WCV_VERSION') ) { ?>
+											<li><a href="<?php bp_loggedin_user_link(); ?>vendor-dashboard" class="xlighter" title="">Sales Dashboard</a></li>
+											<li><a href="<?php bp_loggedin_user_link(); ?>vendor-dashboard/vendor-dashboard-products/edit/" class="xlighter" title="">Add Product</a></li>
+										<?php } ?>
+
 										<li><a href="<?php bp_loggedin_user_link(); ?>" class="lighter" title="">My Profile</a></li>
 										<li><a href="<?php bp_loggedin_user_link(); ?>settings" class="lighter" title="">Settings</a></li>
-
 										<?php do_action( 'tk_dropdown_before_logout' ); ?>
-
 										<li><a href="<?php echo wp_logout_url( home_url() ); ?>" class="lighter" title="">Logout</a></li>
 
 										<?php do_action( 'tk_dropdown_last' ); ?>
@@ -158,10 +157,6 @@
 		</div>
 	</div>
 
-
-	<!-- <div class="tk-icon-nav">
-		<a class="tk-cart-nav" href="#"><i class="fa fa-shopping-cart"></i></a>
-	</div> -->
 
 	<a class="tf-burger"><span></span></a>
 
