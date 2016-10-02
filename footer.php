@@ -23,7 +23,7 @@
 
 <footer id="footer" class="site-footer" role="contentinfo">
 
-	<?php if( is_active_sidebar( 'footer-column-1' ) || is_active_sidebar( 'footer-column-2' ) || is_active_sidebar( 'footer-column-3' ) || is_active_sidebar( 'footer-column-4' ) || ( !is_active_sidebar( 'footer-column-1' ) && current_user_can('edit_theme_options') )  ) : ?>
+	<?php if( is_active_sidebar( 'footer-column-1' ) || is_active_sidebar( 'footer-column-2' ) || is_active_sidebar( 'footer-column-3' ) || is_active_sidebar( 'footer-column-4' ) ) : ?>
 
 		<div id="footer-columns-wrap" class="footer-columns cc-footer">
 			<div class="container">
@@ -32,8 +32,7 @@
 					<div id="tk-footer-1" class="footer-column col-xs-12 col-sm-6 col-md-3">
 						<div class="widgetarea">
 
-							<?php if( !dynamic_sidebar( 'footer-column-1' ) && current_user_can('edit_theme_options') ) { ?>
-								<p><a href="<?php echo admin_url('widgets.php') ?>">Add widgets</a></p>
+							<?php if( !dynamic_sidebar( 'footer-column-1' ) ) { ?>
 							<?php } ?>
 
 						</div>
@@ -42,8 +41,7 @@
 					<div id="tk-footer-2" class="footer-column col-xs-12 col-sm-6 col-md-3">
 						<div class="widgetarea">
 
-							<?php if( !dynamic_sidebar( 'footer-column-2' ) && current_user_can('edit_theme_options') ) { ?>
-								<p><a href="<?php echo admin_url('widgets.php') ?>">Add widgets</a></p>
+							<?php if( !dynamic_sidebar( 'footer-column-2' ) ) { ?>
 							<?php } ?>
 
 						</div>
@@ -52,8 +50,7 @@
 					<div id="tk-footer-3" class="footer-column col-xs-12 col-sm-6 col-md-3">
 						<div class="widgetarea">
 
-							<?php if( !dynamic_sidebar( 'footer-column-3' ) && current_user_can( 'edit_theme_options' ) ) { ?>
-								<p><a href="<?php echo admin_url('widgets.php') ?>">Add widgets</a></p>
+							<?php if( !dynamic_sidebar( 'footer-column-3' ) ) { ?>
 							<?php } ?>
 
 						</div>
@@ -62,8 +59,7 @@
 					<div id="tk-footer-4" class="footer-column col-xs-12 col-sm-6 col-md-3">
 						<div class="widgetarea">
 
-							<?php if( !dynamic_sidebar( 'footer-column-4' ) && current_user_can( 'edit_theme_options' ) ) { ?>
-								<p><a href="<?php echo admin_url('widgets.php') ?>">Add widgets</a></p>
+							<?php if( !dynamic_sidebar( 'footer-column-4' ) ) { ?>
 							<?php } ?>
 
 						</div>

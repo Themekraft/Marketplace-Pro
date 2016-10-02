@@ -100,14 +100,45 @@ function _tk_widgets_init() {
 
 
   // footer widgetareas
-  register_sidebars( 4, array(
-        'name'          => 'Footer Column %1$s',
-        'id'            => 'footer-column-%1%',
-        'before_widget' => '<div id="%1$s" class="widget %2$s">',
-        'after_widget'  => '</div><div class="clear"></div>',
-        'before_title'  => '<h3 class="widgettitle">',
-        'after_title'   => '</h3>'
-    ) );
+	register_sidebar( array(
+			'name'          => 'Footer Column 1',
+			'id'            => 'footer-column-1',
+			'description'   => 'The footer columns widgetarea',
+			'before_widget' => '<div id="%1$s" class="footer-column-widget %2$s">',
+			'after_widget'  => '</div><div class="clear"></div>',
+			'before_title'  => '<h3 class="widgettitle">',
+			'after_title'   => '</h3>'
+	) );
+
+	register_sidebar( array(
+			'name'          => 'Footer Column 2',
+			'id'            => 'footer-column-2',
+			'description'   => 'The footer columns widgetarea',
+			'before_widget' => '<div id="%1$s" class="footer-column-widget %2$s">',
+			'after_widget'  => '</div><div class="clear"></div>',
+			'before_title'  => '<h3 class="widgettitle">',
+			'after_title'   => '</h3>'
+	) );
+
+	register_sidebar( array(
+			'name'          => 'Footer Column 3',
+			'id'            => 'footer-column-3',
+			'description'   => 'The footer columns widgetarea',
+			'before_widget' => '<div id="%1$s" class="footer-column-widget %2$s">',
+			'after_widget'  => '</div><div class="clear"></div>',
+			'before_title'  => '<h3 class="widgettitle">',
+			'after_title'   => '</h3>'
+	) );
+
+	register_sidebar( array(
+			'name'          => 'Footer Column 4',
+			'id'            => 'footer-column-4',
+			'description'   => 'The footer columns widgetarea',
+			'before_widget' => '<div id="%1$s" class="footer-column-widget %2$s">',
+			'after_widget'  => '</div><div class="clear"></div>',
+			'before_title'  => '<h3 class="widgettitle">',
+			'after_title'   => '</h3>'
+	) );
 
 }
 add_action( 'widgets_init', '_tk_widgets_init' );
@@ -134,13 +165,14 @@ function _tk_scripts() {
 
 	wp_enqueue_script( '_tk-skip-link-focus-fix', get_template_directory_uri() . '/includes/js/skip-link-focus-fix.js', array(), '20130115', true );
 
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+	if( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 
-	if ( is_singular() && wp_attachment_is_image() ) {
+	if( is_singular() && wp_attachment_is_image() ) {
 		wp_enqueue_script( '_tk-keyboard-image-navigation', get_template_directory_uri() . '/includes/js/keyboard-image-navigation.js', array( 'jquery' ), '20120202' );
 	}
+
 
 }
 add_action( 'wp_enqueue_scripts', '_tk_scripts' );

@@ -40,7 +40,7 @@ jQuery( document ).ready( function( jQuery ) {
     });
 
     // auto smooth scroll for href="#somethin"
-    // just on homepage!! deactivate if you get issues with other scripts
+    // just on homepage!! deactivate if you get issues with other scripts 
     jQuery(function() {
       if (jQuery('body.front-page').length) {
         jQuery('a[href*=\\#]:not([href=\\#])').click(function() {
