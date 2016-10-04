@@ -86,7 +86,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
     </div>
 
-    <div class="col-xs-12 col-md-4">
+    <div class="sidebar col-xs-12 col-md-4">
 
       <?php do_action( 'tk_single_product_sidebar_first' ); ?>
 
