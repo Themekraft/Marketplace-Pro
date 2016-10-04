@@ -4,7 +4,7 @@ Theme URI: https://github.com/Themekraft/Marketplace-Pro
 Author: Konrad Sroka
 Author URI: http://themekraft.com
 Description: A clean starter theme for WooCommerce & BuddyPress. Another tool by ThemeKraft.
-Version: 1.0.2 Beta
+Version: 1.0.3 Beta
 License: GNU General Public License v3.0 /
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Tags: coffee, surf
@@ -1008,6 +1008,9 @@ display: block;
     width: 100%;
     overflow: auto;
 }
+.entry-content-thumbnail.entry-content-thumbnail-grid {
+    min-height: 200px;
+}
 .single .entry-content-thumbnail {
 	margin-bottom: 30px;
 }
@@ -1039,45 +1042,53 @@ display: block;
     font-size: 17px;
 		margin: 0 0 15px;
 }
+.entry-meta .posted-on {
+    float: right;
+}
 
 
 /* Post Single */
 .single-post .hentry {
-    padding: 30px 20px;
+    padding: 0 20px 30px;
     background: #fff;
     border: 1px solid #ddd;
     box-shadow: 1px 1px 3px rgba(0,0,0,0.08);
-}
-@media (min-width: 520px) {
-	.single-post .hentry {
-	    padding: 40px 30px;
-	}
 }
 .single-post .page-title {
     margin: 10px 0;
 }
 .single-post .entry-meta {
-	margin: 0px 10px 0px 0;
+	margin: 20px 10px 0 0;
 	background: transparent;
 	border: none;
 	color: #999;
-	display: inline-block;
+	display: block;
 	font-size: 17px;
-
 }
 .single-post .entry-content {
   margin-bottom: 20px;
 }
 .single-post .entry-content-thumbnail {
-  float: left;
+    float: none;
+    margin: 0 -20px 0;
+    width: auto;
+}
+.entry-content-thumbnail:hover {
+    opacity: 0.85;
 }
 .blog .entry-content-thumbnail img {
 	margin-bottom: 20px;
 }
 .single-post .entry-content-thumbnail img {
-    margin: 8px 30px 25px 0;
 }
-
+@media (min-width: 520px) {
+	.single-post .hentry {
+	    padding: 0 30px 40px;
+	}
+	.single-post .entry-content-thumbnail {
+	    margin: 0 -30px 0;
+	}
+}
 
 /* Comments */
 #comments h5 cite {
@@ -2313,6 +2324,9 @@ a.bp-title-button {
 .wcvendors_sold_by_in_loop a {
   color: #999;
 }
+center {
+  margin-bottom: 20px;
+}
 
 /* WC Vendors Store List Loop */
 .wcv_vendorslist a.button {
@@ -2325,41 +2339,93 @@ a.bp-title-button {
 }
 
 /* WC Vendor Store Page */
-.wcv-header-container #inner-element {
+.wcv-header-container {
+    min-height: 200px;
     background: transparent;
-    max-width: 400px;
-    margin: 50px auto 0;
+    overflow: auto;
+}
+.wcv-header-container #inner-element ul.social-icons {
+    clear: both;
+    padding: 0;
+		margin: 10px 0 0 0;
 }
 .wcv-header-container #inner-element .store-info {
-    text-align: center;
-    padding: 0;
-    margin: 0;
-    width: 100%;
-    display: block;
-    color: #fff;
-		text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+	font-size: 14px;
+	padding-bottom: 30px;
 }
 .wcv-header-container #inner-element .store-info p {
-		margin-top: 20px;
-    padding: 20px;
-    background: #fff;
-    color: #3f3f3f;
-}
-/* Quick Hide For Now */
-.wcv-header-container #inner-element .store-info p,
-.wcv-header-container #inner-element ul.social-icons {
-    display: none;
-}
-.wcv-header-container #inner-element .store-brand {
-    display: block;
-    overflow: auto;
-    width: 100%;
-    margin: 0;
-    padding: 0;
+	padding: 15px 0 0;
+	margin: 0 0 20px;
 }
 .wcv-header-container #inner-element .store-icon {
-    float: none;
+	/*border-radius: 0;*/
+	display: block;
+	margin: 0 auto;
+	float: none;
+	border: 5px solid #fff;
+	box-shadow: 1px 1px 4px rgba(0,0,0,0.4);
 }
+.wcv-header-container #inner-element {
+		background: transparent;
+		height: auto;
+}
+
+@media (max-width: 768px) {
+	.wcv-header-container .store-banner {
+		display: none;
+	}
+	.wcv-header-container #inner-element {
+			position: relative;
+	}
+	.wcv-header-container #inner-element .store-info h3 {
+		padding: 10px 0;
+		margin: 0;
+		font-size: 21px;
+	}
+	.wcv-header-container #inner-element .store-brand {
+	    float: none;
+	    text-align: center;
+	    display: block;
+			width: auto;
+	}
+	.wcv-header-container #inner-element .store-info {
+		width: auto;
+		display: block;
+	}
+	.wcv-header-container #banner-wrap {
+	    max-height: none;
+	    height: initial;
+	    overflow: auto;
+	    position: relative;
+	}
+}
+
+@media (min-width: 768px) {
+	.wcv-header-container #inner-element .store-info {
+			text-align: left;
+			color: #fff;
+			text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+	}
+	.wcv-header-container #inner-element {
+			margin: 100px 30px 0;
+			width: 100%;
+			display: block;
+	}
+	.wcv-header-container #inner-element ul.social-icons li a {
+		color: #fff;
+		text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+	}
+}
+
+@media (min-width: 992px) {
+	.wcv-header-container #inner-element {
+			margin-top: 100px;
+	}
+	.wcv-header-container #inner-element .store-info {
+			padding-left: 0;
+	}
+}
+
 
 /* WC Vendors miscallenous */
 .checkbox[for="apply_for_vendor"] {
