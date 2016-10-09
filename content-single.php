@@ -8,7 +8,7 @@
 
 	<?php if ( has_post_thumbnail() ) : ?>
 		<div class="entry-content-thumbnail">
-			<a href="<?php the_permalink(); ?>" rel="bookmark" title="Read more"><?php the_post_thumbnail(); ?></a>
+			<?php the_post_thumbnail(); ?>
 		</div>
 	<?php endif; ?>
 

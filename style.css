@@ -3,35 +3,35 @@ Theme Name: Marketplace-Pro
 Theme URI: https://github.com/Themekraft/Marketplace-Pro
 Author: Konrad Sroka
 Author URI: http://themekraft.com
-Description: A clean starter theme for WooCommerce & BuddyPress. Another tool by ThemeKraft.
-Version: 1.0.3 Beta
+Description: A clean starter theme. Perfect for WooCommerce, BuddyPress & WC Vendors. Another tool by ThemeKraft.
+Version: 1.0.5 Beta
 License: GNU General Public License v3.0 /
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Tags: coffee, surf
 
-Based on _tk v1.1.10
+A lean hybrid starter theme packed with essential features. Based on_tk by ThemeKraft.
 
-This theme is the most seamless and minimalistic integration of Twitter Bootstrap Framework into
-the _s starter theme from Automattic, the guys behind WordPress.
+::: More Credits :::
 
-_s (or Underscores) http://underscores.me/, (C) 2012-2013 Automattic, Inc. Twitter Bootstrap
+1. _s (or Underscores) http://underscores.me/,
+	* (C) 2012-2013 Automattic, Inc. Twitter Bootstrap
 
-More Credits:
+2. Twitter Bootstrap
+	* Bootstrap v3.3.6 (http://getbootstrap.com)
+	* Copyright 2011-2015 Twitter, Inc.
+	* Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+	* Generated using the Bootstrap Customizer (http://getbootstrap.com/customize/?id=f58353a31151a8c05d7c)
+	* Config saved to config.json and https://gist.github.com/f58353a31151a8c05d7c
 
-1. Bootstrap
- * Bootstrap v3.3.6 (http://getbootstrap.com)
- * Copyright 2011-2015 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- * Generated using the Bootstrap Customizer (http://getbootstrap.com/customize/?id=f58353a31151a8c05d7c)
- * Config saved to config.json and https://gist.github.com/f58353a31151a8c05d7c
-
-2. wp_bootstrap_navwalker
-* Class Name: wp_bootstrap_navwalker
-* GitHub URI: https://github.com/twittem/wp-bootstrap-navwalker
+3. wp_bootstrap_navwalker
+	* Class Name: wp_bootstrap_navwalker
+	* GitHub URI: https://github.com/twittem/wp-bootstrap-navwalker
 
 */
 
-/* My Minimal WordPress Styling comes here */
+html {
+    background: #f4f4f4;
+}
 body {
 	word-wrap: break-word;
 	background: #fbfbfb;
@@ -44,6 +44,29 @@ body {
 .nopad {
 	padding-bottom: 0;
 }
+.container-flex {
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+/* watch out for the fat white! */
+.fatwhite {
+  background: white;
+	border-bottom: 1px solid rgba(0,0,0,0.15);
+}
+.fatblack {
+  background: #3f3f3f;
+  color: #fff;
+}
+.fathighlight {
+  background: #09b1cc;
+  color: #fff;
+}
+.fat {
+  width: 100%;
+  padding: 50px 20px;
+}
+
 
 /* Typography */
 h1, h2, h3, h4, h5, h6 {
@@ -66,22 +89,20 @@ h1.page-title {
 }
 
 h1 { font-size: 26px; }
-h2 { font-size: 22px; }
-h3 { font-size: 20px; }
-h4 { font-size: 18px; }
+h2 { font-size: 24px; }
+h3 { font-size: 22px; }
+h4 { font-size: 20px; }
+h5 { font-size: 18px; }
+h6 { font-size: 17px; }
 
 @media (min-width: 768px) {
-	h1 { font-size: 48px; }
-	h2 { font-size: 34px; }
-	h3 { font-size: 28px; }
-	h4 { font-size: 24px; }
-
+	h1 { font-size: 38px; }
+	h2 { font-size: 32px; }
+	h3 { font-size: 29px; }
+	h4 { font-size: 26px; }
 }
-
 @media (min-width: 1200px) {
-	h1 {
-		font-size: 48px;
-	}
+	h1 { font-size: 42px; }
 }
 
 a {
@@ -121,10 +142,12 @@ a:focus {
     font-weight: bold !important;
 }
 
+
 /* Buttons */
 input[type="button"],
 input[type="reset"],
 input[type="submit"],
+.button,
 .btn {
 	border-radius: 0;
 	padding: 6px 10px;
@@ -146,12 +169,15 @@ input[type="submit"]:hover,
 input[type="button"]:focus,
 input[type="reset"]:focus,
 input[type="submit"]:focus,
+.button:hover,
+.button:focus,
 .btn:hover,
 .btn:focus {
 	background: #555;
 	border: 1px solid rgba(0,0,0,0.15);
 	color: #fff;
 	box-shadow: none;
+	text-decoration: none;
 }
 .btn-primary {
 	background: #09b1cc;
@@ -172,7 +198,8 @@ input[type="submit"]:focus,
 	input[type="button"],
 	input[type="reset"],
 	input[type="submit"],
-	.btn {
+	.btn,
+	.button {
 		padding: 8px 12px;
 		font-size: 15px;
 	}
@@ -350,9 +377,6 @@ object {
 /* Content */
 .main-content-inner {
 	padding-bottom: 1.5em;
-}
-.hentry {
-	margin: 0 0 40px;
 }
 .sticky {
 	display: block;
@@ -869,22 +893,22 @@ display: block;
 	margin-top: 58px;
 	overflow: hidden;
 }
-
 @media (min-width: 992px) {
 	#mainwrap {
 		margin-top: 72px;
 	}
 }
-
 .main-content {
   padding: 40px 0 0;
+}
+.hentry {
+		margin: 0 0 30px;
 }
 .title-wrap {
 	margin: 0 0 20px;
 	text-align: left;
 	font-size: 17px;
 }
-
 @media (min-width: 768px) {
 	.title-wrap {
 		margin: 0 0 40px;
@@ -900,8 +924,11 @@ display: block;
 	}
 }
 
+
+
 /* TK Post Grid View */
-.tk-grid-row.row {
+
+/*.tk-grid-row.row {
 	margin: 0 -10px;
 }
 .tk-postgrid {
@@ -964,7 +991,6 @@ display: block;
 .tk-grid-link:hover .tk-tile,
 .tk-grid-link:focus .tk-tile {
 	background: #fcfcfc;
-	/*box-shadow: 1px 1px 3px rgba(0,0,0,0.24);*/
 }
 .tk-thumb {
 	border-bottom: 1px solid #ddd;
@@ -989,61 +1015,99 @@ display: block;
 	color: #666;
 	font-weight: normal;
 	letter-spacing: -0.5px;
-}
+}*/
 
 
-/* Blog */
-.blog .page-title {
+
+
+/* Post Lists */
+.page-title {
     margin-bottom: 30px;
     margin-top: 0;
 }
-.blog .hentry {
-    padding: 0 15px 15px;
+.post.hentry {
+		padding: 0 15px 15px;
+    overflow: auto;
     background: #fff;
-    border: 1px solid #ddd;
-    box-shadow: 1px 1px 3px rgba(0,0,0,0.08);
+    border: 1px solid #eee;
+    border: 1px solid rgba(0,0,0,0.08);
+    box-shadow: 1px 1px 4px rgba(0,0,0,0.03);
 }
 .entry-content-thumbnail {
-    min-height: 300px;
     width: 100%;
     overflow: auto;
+}
+.entry-content-thumbnail img {
+	margin-bottom: 10px;
+}
+a .entry-content-thumbnail:hover {
+    opacity: 0.85;
+}
+.entry-thumb-fix {
+	min-height: 300px;
 }
 .entry-content-thumbnail.entry-content-thumbnail-grid {
     min-height: 200px;
 }
-.single .entry-content-thumbnail {
-	margin-bottom: 30px;
-}
-.blog .entry-title {
+/*.front-page .entry-content-thumbnail.entry-content-thumbnail-grid {
+    min-height: 200px;
+}*/
+.tk-content-col .entry-title {
     margin: 10px 0;
-    font-size: 24px;
+    font-size: 17px;
 		line-height: 1.4;
 }
 @media (min-width: 768px) {
-	.blog .entry-title {
-	    font-size: 28px;
+	.tk-content-col .entry-title {
+	    font-size: 19px;
 	}
 }
-.blog .entry-meta {
-    margin: 15px 0 10px;
+.entry-meta {
+		display: block;
+		overflow: auto;
+    margin: 15px 0 15px;
     background: transparent;
     border: none;
     color: #999;
-    display: block;
 		font-size: 14px;
 }
-.blog .entry-content {
-	margin: 30px 0;
-}
-.blog .entry-content {
+.entry-content {
 	margin: 0 0 30px;
 }
-.blog .entry-summary {
-    font-size: 17px;
+.entry-summary {
+		height: 40px;
+    font-size: 14px;
 		margin: 0 0 15px;
+}
+.blog .entry-summary {
+		height: 40px;
+		overflow: hidden;
 }
 .entry-meta .posted-on {
     float: right;
+}
+.entry-meta .cat-links {
+	float: left;
+	margin: 3px 10px 0 0;
+}
+@media (min-width: 1200px) {
+	.entry-summary {
+	}
+}
+
+/* Post List View - 2 and 3 Columns clearing */
+.tk-content-2-col:nth-child(2n+1) {
+	clear: left;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+	.tk-content-3-col:nth-child(2n+1) {
+		clear: left;
+	}
+}
+@media (min-width: 992px) {
+	.tk-content-3-col:nth-child(3n+1) {
+		clear: left;
+	}
 }
 
 
@@ -1058,7 +1122,7 @@ display: block;
     margin: 10px 0;
 }
 .single-post .entry-meta {
-	margin: 20px 10px 0 0;
+	margin: 15px 10px 0 0;
 	background: transparent;
 	border: none;
 	color: #999;
@@ -1073,14 +1137,6 @@ display: block;
     margin: 0 -20px 0;
     width: auto;
 }
-.entry-content-thumbnail:hover {
-    opacity: 0.85;
-}
-.blog .entry-content-thumbnail img {
-	margin-bottom: 20px;
-}
-.single-post .entry-content-thumbnail img {
-}
 @media (min-width: 520px) {
 	.single-post .hentry {
 	    padding: 0 30px 40px;
@@ -1090,7 +1146,16 @@ display: block;
 	}
 }
 
+/* Page Single */
+.page.hentry {
+    background: transparent;
+    border: none;
+}
+
 /* Comments */
+#comments {
+    margin: 50px 0;
+}
 #comments h5 cite {
   margin-right: 3px;
 	font-style: normal;
@@ -1120,10 +1185,22 @@ display: block;
   font-size: 21px;
   padding: 15px;
 }
+#footer .footer-columns .menu {
+	padding: 0;
+}
+#footer .footer-columns .menu>li {
+	/*padding: 0;*/
+	list-style: none;
+}
+#footer .footer-columns .menu>li>a,
 #footer .footer-columns .nav>li>a {
 	font-size: 15px;
 	padding: 10px 15px;
+	display: block;
+	position: relative;
 }
+#footer .footer-columns .menu>li>a:hover,
+#footer .footer-columns .menu>li>a:focus,
 #footer .footer-columns .nav>li>a:hover,
 #footer .footer-columns .nav>li>a:focus {
     /*background-color: #09b1cc;
@@ -1133,6 +1210,8 @@ display: block;
 		/*color: #039bb4;*/
 }
 @media (min-width: 1200px) {
+	#footer .footer-columns .menu>li>a:hover,
+	#footer .footer-columns .menu>li>a:focus,
 	#footer .footer-columns .nav>li>a:hover,
 	#footer .footer-columns .nav>li>a:focus {
 	    background-color: #f9f9f9;
@@ -1167,7 +1246,7 @@ display: block;
   margin: 0;
 	font-weight: bold;
 }
-#footer-last .nav li a {
+#footer-last .menu li a {
 	padding: 0 15px;
   margin: 20px 0;
   float: none;
@@ -1457,7 +1536,7 @@ html::-webkit-scrollbar { width: 0 !important }
 }
 @media (min-width: 768px) {
 	.bp-user div#item-nav {
-		margin: 0 0 0 -15px;
+		margin: 0;
 		padding: 15px 0;
 	}
 }
@@ -1581,6 +1660,7 @@ img.avatar {
 #buddypress .dir-search input[type="submit"]:hover {
 	background: #e7e7e7;
 	color: #a4a4a4;
+	border-radius: 0 9px 9px 0;
 }
 
 @media (min-width: 768px) {
@@ -1744,6 +1824,7 @@ img.avatar {
 }
 .bp-user article.hentry {
 	margin: 0;
+	padding: 0;
 }
 .bp-user #activity-filter-select {
 	display: none;
@@ -1989,7 +2070,7 @@ body.buddypress.bp-default-cover div#item-header, .bp-default-cover #buddypress 
   padding: 10px 0;
   display: block;
 }
-.editfield {
+.bp-user .editfield {
   margin: 20px 0;
   padding: 10px;
   border: 1px solid #ddd;
@@ -2043,6 +2124,7 @@ p.field-visibility-settings-toggle,
   font-weight: normal;
   padding: 5px;
 }
+
 
 /* Change Avatar Page */
 /* ..this is some extra CSS for the view without JS only */
@@ -2120,6 +2202,124 @@ p.field-visibility-settings-toggle,
     border-radius: 3px;
 }
 
+/* BuddyPress Register Page */
+#buddypress form#signup_form {
+    overflow: auto;
+}
+#buddypress #register-page .register-section .editfield {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+#buddypress #register-page .standard-form label,
+#buddypress #register-page .standard-form span.label {
+    display: block;
+    font-weight: bold;
+    margin: 5px 0 0;
+    width: 100%;
+    font-size: 15px;
+		line-height: 26px;
+}
+#buddypress #register-page .standard-form#signup_form input[type="text"],
+#buddypress #register-page .standard-form#signup_form input[type="email"],
+#buddypress #register-page .standard-form#signup_form input[type="password"] {
+  width: 100%;
+  min-width: 240px;
+	margin: 0 0 10px;
+	padding: 8px;
+	border: 1px solid #ccc;
+	background: #fafafa;
+	background: #fafafa !important;
+	border-radius: 0;
+	color: #767676;
+	font: inherit;
+	font-size: 100%;
+}
+#buddypress #register-page .standard-form#signup_form input[type="checkbox"] {
+	margin-right: 5px;
+}
+#buddypress #register-page .field-visibility-settings-notoggle {
+	background: transparent;
+	padding: 0;
+}
+#buddypress .standard-form#signup_form div.submit {
+  float: none;
+  clear: none;
+}
+#buddypress .standard-form #basic-details-section,
+#buddypress .standard-form #blog-details-section,
+#buddypress .standard-form #profile-details-section {
+		float: none;
+		width: 100%;
+		max-width: 260px;
+		clear: both;
+}
+#buddypress input#signup_submit {
+    padding: 20px 35px;
+    font-size: 17px;
+		width: 100%;
+}
+
+@media (min-width: 768px) {
+	#buddypress #register-page .standard-form label,
+	#buddypress #register-page .standard-form span.label {
+			display: inline-block;
+			margin: 15px 0 5px;
+			width: 220px;
+	}
+	#buddypress #register-page .standard-form#signup_form input[type="text"],
+	#buddypress #register-page .standard-form#signup_form input[type="email"],
+	#buddypress #register-page .standard-form#signup_form input[type="password"] {
+		width: calc( 100% - 260px );
+		margin: 0 0 20px;
+		clear: both;
+	}
+	#buddypress input#signup_submit {
+			width: auto;
+	}
+	#buddypress .standard-form #basic-details-section,
+	#buddypress .standard-form #blog-details-section,
+	#buddypress .standard-form #profile-details-section {
+			float: none;
+			width: 100%;
+			max-width: 500px;
+	}
+}
+@media (min-width: 992px) {
+	#buddypress .standard-form #basic-details-section,
+	#buddypress .standard-form #blog-details-section,
+	#buddypress .standard-form #profile-details-section {
+			float: none;
+			width: 500px;
+	}
+}
+
+@media (min-width: 1200px) {
+	#buddypress .standard-form #basic-details-section,
+	#buddypress .standard-form #blog-details-section,
+	#buddypress .standard-form #profile-details-section {
+			float: left;
+			width: 50%;
+			max-width: none;
+			clear: none;
+	}
+}
+#buddypress #register-page #field-visibility-settings-toggle-1 {
+    display: none;
+}
+
+/* WP loginform */
+#loginform input.input {
+    border-radius: 0;
+    padding: 10px 25px;
+    font-size: 21px;
+    height: auto;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+    border: 1px solid #ddd;
+    max-width: 300px;
+    display: block;
+    width: 100%;
+}
 
 /* BuddyPress Members Directory */
 /* member search form */
@@ -2297,6 +2497,23 @@ a.bp-title-button {
 		padding: 8px 12px;
 		font-size: 15px;
 	}
+}
+#buddypress a.disabled,
+#buddypress button.disabled,
+#buddypress button.pending,
+#buddypress div.pending a,
+#buddypress input[type=submit].disabled,
+#buddypress input[type=submit].pending,
+#buddypress input[type=submit][disabled=disabled],
+#buddypress input[type=button].disabled,
+#buddypress input[type=button].pending,
+#buddypress input[type=reset].disabled,
+#buddypress input[type=reset].pending {
+    border-color: #ddd;
+    color: #a4a4a4;
+    cursor: default;
+    background: #e4e4e4;
+    opacity: 1;
 }
 
 /* BuddyPress Widgets */

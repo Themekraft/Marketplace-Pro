@@ -13,7 +13,7 @@ get_header(); ?>
   <div class="container">
     <div class="row">
 
-			<div id="content" class="main-content-inner col-xs-12 col-md-9 col-lg-8">
+			<div id="content" class="main-content-inner col-xs-12">
 
 				<?php // add the class "panel" below here to wrap the content-padder in Bootstrap style ;) ?>
 				<div class="content-padder">
@@ -80,29 +80,26 @@ get_header(); ?>
 							?>
 						</header><!-- .page-header -->
 
-						<?php /* Start the Loop */ ?>
-						<?php while ( have_posts() ) : the_post(); ?>
+            <div class="row">
 
-							<?php
-								/* Include the Post-Format-specific template for the content.
-								 * If you want to overload this in a child theme then include a file
-								 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-								 */
+    					<?php /* Start the Loop */ ?>
+              <?php while ( have_posts() ) : the_post(); ?>
 
-								get_template_part( 'content', get_post_format() );
-							?>
+      							<?php get_template_part( 'content-3-col', get_post_format() ); ?>
 
-						<?php endwhile; ?>
+    					<?php endwhile; ?>
 
-						<?php _tk_content_nav( 'nav-below' ); ?>
+    						<?php _tk_content_nav( 'nav-below' ); ?>
 
-					<?php else : ?>
+            </div>
 
-						<?php get_template_part( 'no-results', 'archive' ); ?>
+  					<?php else : ?>
 
-					<?php endif; ?>
+  						<?php get_template_part( 'no-results', 'archive' ); ?>
+
+  					<?php endif; ?>
 
 				</div><!-- .content-padder -->
 
-<?php get_sidebar(); ?>
+<?php // get_sidebar(); ?>
 <?php get_footer(); ?>
