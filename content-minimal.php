@@ -6,13 +6,13 @@
 
     <div class="featuredhome-innerwrap">
 
-      <!-- <div class="featuredhome-thumb-fix-wrap">
+      <div class="featuredhome-thumb-fix-wrap">
         <div class="featuredhome-thumb-fix" style="background: #fff url('<?php the_post_thumbnail_url(); ?>') 0 0 scroll no-repeat; background-size: cover;"></div>
-      </div> -->
-
-      <div class="featuredhome-img">
-        <?php the_post_thumbnail(); ?>
       </div>
+
+      <!-- <div class="featuredhome-img">
+        <?php the_post_thumbnail(); ?>
+      </div> -->
 
       <div class="featuredhome-title">
         <small>

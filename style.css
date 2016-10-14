@@ -890,7 +890,7 @@ display: block;
 /* Main Content */
 #mainwrap {
 	padding-top: 0;
-	margin-top: 58px;
+	margin-top: 57px;
 	overflow: hidden;
 }
 @media (min-width: 992px) {
@@ -1088,12 +1088,15 @@ a .entry-content-thumbnail:hover {
 }
 .entry-meta .cat-links {
 	float: left;
-	margin: 3px 10px 0 0;
+	margin: 0 10px 0 0;
 }
-@media (min-width: 1200px) {
-	.entry-summary {
-	}
+.tk-content-col .cat-links a {
+  color: #a4a4a4;
+  font-weight: normal;
+  text-transform: uppercase;
+  font-size: 12px;
 }
+
 
 /* Post List View - 2 and 3 Columns clearing */
 .tk-content-2-col:nth-child(2n+1) {
