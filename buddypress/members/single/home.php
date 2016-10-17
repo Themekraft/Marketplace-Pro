@@ -1,45 +1,70 @@
 <div id="buddypress">
 
-	<div id="item-header" role="complementary">
+	<?php global $bp; // echo 'action:'.$bp->current_action; ?>
 
-		<?php
-		/**
-		 * If the cover image feature is enabled, use a specific header
-		 */
-		if ( bp_displayed_user_use_cover_image_header() ) :
-			bp_get_template_part( 'members/single/cover-image-header' );
-		else :
-			bp_get_template_part( 'members/single/member-header' );
-		endif;
-		?>
+	<?php if ( bp_is_my_profile() ) { ?>
+		<p id="back-to-dashboard"><a class="btn btn-primary btn-small" href="<?php echo home_url(); ?>" title="Take me home"><i class="fa fa-angle-left"></i> &nbsp;Dashboard</a></p>
+	<?php } ?>
 
-	</div><!-- #item-header -->
+	<?php if ( $bp->current_component == 'profile' && $bp->current_action == 'public' ) { ?>
 
-	<div class="tk-member-row">
+		<div id="item-header" role="complementary">
 
-		<div id="profile-sidebar" class="col-xs-12 col-sm-3 col-lg-3">
+			<!-- <p id="publicprofilemsg"><i class="fa fa-info-circle"></i>&nbsp; This is your profile</p> -->
 
-			<div id="item-nav">
-				<div class="item-list-tabs no-ajax" id="object-nav" role="navigation">
-					<ul>
+			<?php
+			/**
+			 * If the cover image feature is enabled, use a specific header
+			 */
+			if ( bp_displayed_user_use_cover_image_header() ) :
+				bp_get_template_part( 'members/single/cover-image-header' );
+			else :
+				bp_get_template_part( 'members/single/member-header' );
+			endif;
+			?>
 
-						<?php bp_get_displayed_user_nav(); ?>
+		</div><!-- #item-header -->
 
-						<?php
+	<?php } ?>
 
-						/**
-						 * Fires after the display of member options navigation.
-						 *
-						 * @since 1.2.4
-						 */
-						do_action( 'bp_member_options_nav' ); ?>
+	<div class="row tk-member-row">
 
-					</ul>
-				</div>
-			</div><!-- #item-nav -->
+		<div id="af-home-sidebar" class="col-xs-12 col-sm-4 col-md-3">
+
+			<div id="profile-sidebar" class="af-dashboard-home-tile">
+
+				<?php if ( bp_is_my_profile() ) { ?>
+
+					<div class="af-home-welcome-card">
+						<!-- <p style="color: #aaa; margin-bottom: 20px;">Great you're here again,</p> -->
+						<div class="af-dashboard-avatar">
+							<a href="<?php bp_displayed_user_link(); ?>" title="View my Profile">
+								<?php bp_loggedin_user_avatar( 'type=full' ); ?>
+							</a>
+						</div>
+						<div class="af-dashboard-username"><a href="<?php bp_loggedin_user_link(); ?>" title="View my Profile"><?php echo bp_get_user_firstname(); ?></a></div>
+					</div>
+
+				<?php } ?>
+
+				<div id="item-nav">
+					<div class="item-list-tabs no-ajax" id="object-nav" role="navigation">
+						<ul>
+							<?php if ( bp_is_my_profile() ) { ?>
+								<?php bp_get_loggedin_user_nav(); ?>
+							<?php } else { ?>
+								<?php bp_get_displayed_user_nav(); ?>
+							<?php } ?>
+							<?php do_action( 'bp_member_options_nav' ); ?>
+						</ul>
+					</div>
+				</div><!-- #item-nav -->
+
+			</div>
+
 		</div>
 
-		<div id="item-body" role="main" class="col-xs-12 col-sm-9 col-lg-9">
+		<div id="item-body" role="main" class="col-xs-12 col-sm-8 col-md-9">
 
 			<?php
 

@@ -346,7 +346,7 @@ if ( class_exists( 'WooCommerce' ) ) {
     remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20, 0 );
 
     // Redirect to checkout when adding to cart
-    add_filter ('woocommerce_add_to_cart_redirect', 'redirect_to_checkout');
+    add_filter ('add_to_cart_redirect', 'redirect_to_checkout');
     function redirect_to_checkout() {
         global $woocommerce;
         $checkout_url = $woocommerce->cart->get_checkout_url();
@@ -386,7 +386,7 @@ if ( class_exists( 'BuddyPress' ) ) {
 
 
 	// BuddyPress Nav & Subnav
-	//add_action( 'bp_setup_nav', 'tk_bp_nav_tabs', 9999 );
+	add_action( 'bp_setup_nav', 'tk_bp_nav_tabs', 9999 );
 
 	function tk_bp_nav_tabs() {
 		global $bp;
@@ -396,7 +396,7 @@ if ( class_exists( 'BuddyPress' ) ) {
 		// bp_core_remove_subnav_item( $bp->profile->slug, 'change-cover-image' );
 
 		// Renaming a few tabs here
-		$bp->bp_options_nav['profile']['public']['name'] = 'My Profile';
+		$bp->bp_options_nav['profile']['public']['name'] = 'Profile';
 		$bp->bp_options_nav['profile']['edit']['name'] = 'Edit Profile';
 		$bp->bp_options_nav['profile']['change-avatar']['name'] = 'Change Avatar';
 		// $bp->bp_options_nav['profile']['change-cover-image']['name'] = 'Change Cover';
