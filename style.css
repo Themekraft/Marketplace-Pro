@@ -1851,8 +1851,10 @@ img.avatar {
 .bp-user.my-account .main-content {
     padding: 0;
 }
-.bp-user.my-account.public .main-content {
-    padding: 40px 0 0 0;
+@media (min-width: 768px) {
+	.bp-user.my-account.public .main-content {
+		padding: 40px 0 0 0;
+	}
 }
 .bp-user article.hentry {
 	margin: 0;
@@ -2784,9 +2786,9 @@ table.events-community.my-events td a.button {
 
 /* Dashboard Sidebar */
 #af-home-sidebar #profile-sidebar {
-    /*padding: 30px 20px 20px;
-    background: #fff;
-    border: 1px solid #ddd;*/
+    padding: 0;
+    background: transparent;
+    border: none;
 }
 @media (max-width: 767px) {
   #af-home-sidebar #profile-sidebar {

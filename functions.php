@@ -399,7 +399,7 @@ if ( class_exists( 'BuddyPress' ) ) {
 		$bp->bp_options_nav['profile']['public']['name'] = 'Profile';
 		$bp->bp_options_nav['profile']['edit']['name'] = 'Edit Profile';
 		$bp->bp_options_nav['profile']['change-avatar']['name'] = 'Change Avatar';
-		// $bp->bp_options_nav['profile']['change-cover-image']['name'] = 'Change Cover';
+		$bp->bp_options_nav['profile']['change-cover-image']['name'] = 'Change Cover';
 
 	}
 
