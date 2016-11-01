@@ -51,7 +51,7 @@
 					<div class="item-list-tabs no-ajax" id="object-nav" role="navigation">
 						<ul>
 							<?php if ( bp_is_my_profile() ) { ?>
-								<?php bp_get_loggedin_user_nav(); ?>
+								<?php get_template_part( 'tk-dashboard' ); ?>
 							<?php } else { ?>
 								<?php bp_get_displayed_user_nav(); ?>
 							<?php } ?>

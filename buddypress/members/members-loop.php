@@ -63,6 +63,8 @@ do_action( 'bp_before_members_loop' ); ?>
 							<a href="<?php bp_member_permalink(); ?>"><?php bp_member_name(); ?></a>
 						</div>
 
+						<?php do_action( 'tk_member_loop_after_username' ); ?>
+
 						<div class="item-meta"><span class="activity"><?php bp_member_last_active(); ?></span></div>
 
 						<?php

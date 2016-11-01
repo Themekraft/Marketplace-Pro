@@ -4,7 +4,7 @@ Theme URI: https://github.com/Themekraft/Marketplace-Pro
 Author: Konrad Sroka
 Author URI: http://themekraft.com
 Description: A clean starter theme. Perfect for WooCommerce, BuddyPress & WC Vendors. Another tool by ThemeKraft.
-Version: 1.1 Beta
+Version: 1.2.4 Beta
 License: GNU General Public License v3.0 /
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Tags: coffee, surf
@@ -1061,13 +1061,13 @@ display: block;
 	margin-bottom: 30px;
 }
 .entry-title {
-    margin: 10px 0;
-    font-size: 19px;
+    margin: 25px 0 15px;
+    font-size: 23px;
 		line-height: 1.4;
 }
 @media (min-width: 768px) {
 	.entry-title {
-	    font-size: 22px;
+	    font-size: 32px;
 	}
 }
 .entry-meta {
@@ -1082,7 +1082,7 @@ display: block;
 	margin: 0 0 30px;
 }
 .entry-summary {
-		height: 40px;
+		height: auto;
     font-size: 14px;
 		margin: 0 0 15px;
 }
@@ -1118,12 +1118,15 @@ display: block;
 	display: block;
 	font-size: 17px;
 }
+.single-post .entry-meta .cat-links a {
+	color: #999;
+}
 .single-post .entry-content {
   margin-bottom: 0;
 }
 .single-post .entry-content-thumbnail {
     float: none;
-    margin: 0;
+    margin: 0 -20px;
     width: auto;
 }
 a .entry-content-thumbnail:hover {
@@ -1141,6 +1144,10 @@ a .entry-content-thumbnail:hover {
 	.single-post .entry-content-thumbnail {
 	    margin: 0 -30px 0;
 	}
+}
+.single-post .main-content,
+.single-post .main-content-inner {
+	padding: 0 0 10px;
 }
 
 /* Comments */
@@ -1166,11 +1173,14 @@ a .entry-content-thumbnail:hover {
 	overflow: auto;
 	background: #fff;
 	border-top: 1px solid #ddd;
-	color: #a3a3a3;
+	color: #999;
 	padding: 40px 0 0;
 }
 #footer a {
 	font-weight: normal;
+}
+#footer .footer-columns {
+	margin-bottom: 40px;
 }
 #footer .footer-columns .widgettitle {
   font-size: 21px;
@@ -1189,6 +1199,7 @@ a .entry-content-thumbnail:hover {
 	padding: 10px 15px;
 	display: block;
 	position: relative;
+	color: #999;
 }
 #footer .footer-columns .menu>li>a:hover,
 #footer .footer-columns .menu>li>a:focus,
@@ -1197,7 +1208,7 @@ a .entry-content-thumbnail:hover {
     /*background-color: #09b1cc;
     color: #fff;*/
 		background-color: #f9f9f9;
-		color: #a3a3a3;
+		color: #3f3f3f;
 		/*color: #039bb4;*/
 }
 @media (min-width: 1200px) {
@@ -1213,7 +1224,7 @@ a .entry-content-thumbnail:hover {
 /* Footer Last */
 #footer-last {
 	padding: 0;
-	margin-top: 20px;
+	margin-top: 0;
 	font-size: 15px;
 	color: #b3b3b3;
 	background: #fbfbfb;
@@ -1256,6 +1267,7 @@ a .entry-content-thumbnail:hover {
 #footer-last a:hover,
 #footer-last a:focus {
 	color: #666;
+	background: transparent;
 }
 
 @media (min-width: 768px) {
@@ -1501,6 +1513,58 @@ a .entry-content-thumbnail:hover {
     min-width: 115px;
     padding: 6px;
 }
+
+/* WooCommerce Purchase History */
+.my_account_orders tr.order td {
+	overflow: auto;
+	padding: 0 15px 15px 0;
+	vertical-align: top;
+}
+table.shop_table.shop_table_responsive.my_account_orders {
+	font-size: 12px;
+}
+@media (max-width: 767px) {
+/* note: woocommerce have a bug in their max width! they have set it to max-width 768px instead of 767px */
+	table.shop_table.shop_table_responsive.my_account_orders {
+		width: 75%;
+		min-width: 300px;
+		max-width: 100%;
+	}
+}
+@media (min-width: 768px) {
+/* note: woocommerce have a bug in their max width! they have set it to max-width 768px instead of 767px */
+	table.shop_table.shop_table_responsive.my_account_orders {
+		width: 100%;
+	}
+}
+@media (min-width: 992px) {
+	table.shop_table.shop_table_responsive.my_account_orders {
+		font-size: 15px;
+	}
+}
+.my_account_orders tr.order td.order-actions {
+    padding: 0 0 15px 0;
+    min-width: 170px;
+}
+
+/* WooCommerce Purchase History - BuddyPress specific */
+#buddypress tr.order td a.button {
+    padding: 3px 7px !important;
+    margin: 0 5px 5px 0;
+    font-size: 12px;
+    background: #aaa;
+}
+
+/* Cart in BuddyPress */
+.bp-user #buddypress .woocommerce input[type=submit],
+.bp-user.woocommerce-cart form input#coupon_code,
+#buddypress .woocommerce .button {
+    padding: 10px 10px;
+    font-size: 15px;
+    line-height: 1;
+    height: 38px;
+}
+
 
 
 
@@ -1939,7 +2003,7 @@ img.avatar {
 }
 body.buddypress.bp-default-cover div#item-header, .bp-default-cover #buddypress div#item-header {
 	background-color: #09b1cc;
-	box-shadow: inset 0 -160px 160px rgba(0,0,0,0.18);
+	box-shadow: inset 0 -160px 160px rgba(0,0,0,0.58);
 	margin-top: 0;
 }
 .bp-user.public .profile-cover-action {
@@ -2424,17 +2488,19 @@ form#notifications-sort-order {
 }
 .member-loop-grid-item {
 		float: left;
-		min-width: 148px;
+		width: 150px;
     text-align: center;
-		padding: 0 2px 30px;
+		padding: 0 0 30px;
+		min-height: 275px;
 }
 @media (min-width: 768px) {
 	.member-loop-grid-item {
-			min-width: 180px;
+			width: 180px;
 	}
 }
-.member-loop-grid-item .item {
-    margin-bottom: 10px;
+#buddypress li .member-loop-grid-item div.item {
+    margin: 0;
+    padding: 0 15px;
 }
 #buddypress ul#members-list li img.avatar {
     float: none;
@@ -2452,6 +2518,7 @@ form#notifications-sort-order {
     right: auto;
     text-align: center;
 		margin: 0;
+    width: 100%;
 }
 
 
@@ -2597,13 +2664,52 @@ center {
 }
 
 /* WC Vendors Store List Loop */
+ul.wcv_vendorslist {
+	padding: 0;
+}
+ul.wcv_vendorslist div {
+	width: 48%;
+	text-align: center;
+	margin: 0 !important;
+	padding: 10px;
+}
 .wcv_vendorslist a.button {
     display: block;
+    background: transparent;
+    font-size: 12px;
+    border: none;
+    padding: 0;
+    text-shadow: none;
+    color: inherit;
+    margin: 0;
 }
 .wcv_vendorslist a img.avatar {
-    width: 150px;
-		height: 150px;
+    width: 75px;
+		height: 75px;
 		display: block;
+}
+@media (min-width: 500px) {
+	ul.wcv_vendorslist div {
+			width: 32%;
+	}
+}
+@media (min-width: 768px) {
+	ul.wcv_vendorslist div {
+			width: auto;
+			margin-right: 50px !important;
+	}
+	.wcv_vendorslist a img.avatar {
+		width: 150px;
+		height: 150px;
+	}
+	.wcv_vendorslist a.button {
+			font-size: 15px;
+	}
+}
+@media (min-width: 992px) {
+	.wcv_vendorslist a.button {
+	    font-size: 17px;
+	}
 }
 
 /* WC Vendor Store Page */
@@ -2624,6 +2730,9 @@ center {
 .wcv-header-container #inner-element .store-info p {
 	padding: 15px 0 0;
 	margin: 0 0 20px;
+}
+.wcv-store-header a {
+    color: #fff;
 }
 .wcv-header-container #inner-element .store-icon {
 	/*border-radius: 0;*/
@@ -2698,9 +2807,22 @@ center {
     display: inline-block;
 }
 
+/* WC Vendors Store Settings */
 
-
-
+.wcv-form .control-group .inline li {
+    list-style: none;
+}
+.wcv-form #shipping .control-group input[type=checkbox] {
+    top: 6px;
+}
+.bp-user #buddypress input[type=submit].wcv-button#update_button {
+    padding: 9px 10px;
+    font-size: 14px;
+    margin-left: 10px;
+    width: 100px;
+    float: none;
+    display: block;
+}
 
 
 
@@ -2898,6 +3020,8 @@ table.events-community.my-events td a.button {
 }
 
 
+/* Dashboard WC Vendors stuff */
+
 .front-page .wcv_recent_orders,
 .front-page .wcv_dashboard_datepicker,
 .front-page .wcv-grid nav.wcv-navigation {
@@ -2947,8 +3071,6 @@ table.events-community.my-events td a.button {
 
 
 
-
-
 /* Miscallenous */
 
 /* Input Tweak */
@@ -2982,11 +3104,16 @@ html::-webkit-scrollbar { width: 0 !important }
     font-size: 12px;
 }
 .bp-user.xprofile div#user_switching_switch_to {
-    position: absolute;
-    top: 70px;
+		position: absolute;
+		top: 15px;
     right: 15px;
 }
 .bp-user.xprofile #buddypress #item-header div#user_switching_switch_to a {
     background: #3f3f3f;
     padding: 3px 8px;
+}
+@media (min-width: 768px) {
+	.bp-user.xprofile div#user_switching_switch_to {
+			top: 70px;
+	}
 }
