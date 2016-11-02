@@ -4,7 +4,7 @@ Theme URI: https://github.com/Themekraft/Marketplace-Pro
 Author: Konrad Sroka
 Author URI: http://themekraft.com
 Description: A clean starter theme. Perfect for WooCommerce, BuddyPress & WC Vendors. Another tool by ThemeKraft.
-Version: 1.2.4 Beta
+Version: 1.2.5
 License: GNU General Public License v3.0 /
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Tags: coffee, surf
@@ -1033,11 +1033,28 @@ display: block;
 }
 
 
+/* Post List View - 2 and 3 Columns clearing */
+.tk-content-2-col:nth-child(2n+1) {
+	clear: left;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+	.tk-content-3-col:nth-child(2n+1) {
+		clear: left;
+	}
+}
+@media (min-width: 992px) {
+	.tk-content-3-col:nth-child(3n+1) {
+		clear: left;
+	}
+}
+
+
 /* Blog */
 .page-title {
     margin-bottom: 30px;
     margin-top: 0;
 }
+.front-page .hentry,
 .blog .hentry {
     padding: 0 15px 15px;
     background: #fff;
@@ -1061,17 +1078,21 @@ display: block;
 	margin-bottom: 30px;
 }
 .entry-title {
-    margin: 25px 0 15px;
-    font-size: 23px;
+		margin: 15px 0 10px;
+    font-size: 19px;
 		line-height: 1.4;
 }
+.single-post .entry-title {
+		margin: 25px 0 15px;
+		font-size: 23px;
+}
 @media (min-width: 768px) {
-	.entry-title {
+	.single-post .entry-title {
 	    font-size: 32px;
 	}
 }
 .entry-meta {
-    margin: 15px 0 10px;
+    margin: 0;
     background: transparent;
     border: none;
     color: #999;
@@ -1133,9 +1154,10 @@ a .entry-content-thumbnail:hover {
     opacity: 0.85;
 }
 .blog .entry-content-thumbnail img {
-	margin-bottom: 20px;
+	margin-bottom: 10px;
 }
 .single-post .entry-content-thumbnail img {
+	margin-bottom: 10px;
 }
 @media (min-width: 520px) {
 	.single-post .hentry {
@@ -2807,7 +2829,7 @@ ul.wcv_vendorslist div {
     display: inline-block;
 }
 
-/* WC Vendors Store Settings */
+/* WC Vendor Dashboard and Settings Pages */
 
 .wcv-form .control-group .inline li {
     list-style: none;
@@ -2815,15 +2837,17 @@ ul.wcv_vendorslist div {
 .wcv-form #shipping .control-group input[type=checkbox] {
     top: 6px;
 }
-.bp-user #buddypress input[type=submit].wcv-button#update_button {
-    padding: 9px 10px;
-    font-size: 14px;
-    margin-left: 10px;
-    width: 100px;
-    float: none;
-    display: block;
-}
 
+.wcv-navigation ul.menu.black li.active {
+    background: #333;
+}
+.wcv-shade.visible,
+.wcv-modal.visible {
+    z-index: 999999;
+}
+.wcv-form label {
+    font-size: 12px;
+}
 
 
 
@@ -3020,7 +3044,7 @@ table.events-community.my-events td a.button {
 }
 
 
-/* Dashboard WC Vendors stuff */
+/* User Home Dashboard - WC Vendors Related */
 
 .front-page .wcv_recent_orders,
 .front-page .wcv_dashboard_datepicker,
@@ -3057,10 +3081,6 @@ table.events-community.my-events td a.button {
     color: #777;
     text-decoration: none;
 }
-.wcv-navigation ul.menu.black li.active {
-    background: #333;
-}
-
 
 
 
