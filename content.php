@@ -22,20 +22,24 @@
 			<?php if ( 'post' == get_post_type() ) : ?>
 
 				<div class="post-date entry-meta">
-
 					<?php
-						/* translators: used between list items, there is a space after the comma */
-						$categories_list = get_the_category_list( __( ', ', '_tk' ) );
-						if ( $categories_list && _tk_categorized_blog() ) :
-					?>
-					<span class="cat-links">
-						<?php printf( __( '%1$s', '_tk' ), $categories_list ); ?>
-					</span>
-					<?php endif; // End if categories ?>
+							/* translators: used between list items, there is a space after the comma */
+							$categories_list = get_the_category_list( __( ', ', '_tk' ) ); ?>
 
+						<small class="cat-links" style="text-transform: uppercase;">
+							<i class="fa fa-copy" style="margin-right: 4px; display: none;"></i>
+							<?php
 
-					<?php tk_posted_on(); ?>
+							if ( $categories_list && _tk_categorized_blog() ) :
+								printf( __( '%1$s', '_tk' ), $categories_list );
+							else:
+								echo 'UNCATEGORISED';
+							endif; // End if categories
 
+							?>
+						</small>
+
+						<?php tk_posted_on(); ?>
 				</div>
 
 			<?php endif; ?>
