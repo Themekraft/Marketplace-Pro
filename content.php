@@ -17,7 +17,7 @@
 				</a>
 		<?php endif; ?>
 
-		<div class="col-xs-12">
+		<div class="entry-content-wrap col-xs-12">
 
 			<?php if ( 'post' == get_post_type() ) : ?>
 
