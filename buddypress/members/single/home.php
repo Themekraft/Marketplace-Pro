@@ -35,8 +35,7 @@
 
 				<?php if ( bp_is_my_profile() ) { ?>
 
-					<div class="af-home-welcome-card">
-						<!-- <p style="color: #aaa; margin-bottom: 20px;">Great you're here again,</p> -->
+					<div id="af-welcome-card-main" class="af-home-welcome-card">
 						<div class="af-dashboard-avatar">
 							<a href="<?php bp_displayed_user_link(); ?>" title="View my Profile">
 								<?php bp_loggedin_user_avatar( 'type=full' ); ?>

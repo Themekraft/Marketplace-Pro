@@ -346,7 +346,7 @@ if ( class_exists( 'WooCommerce' ) ) {
     remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20, 0 );
 
     // Redirect to checkout when adding to cart
-    add_filter ('add_to_cart_redirect', 'redirect_to_checkout');
+    add_filter ('woocommerce_add_to_cart_redirect', 'redirect_to_checkout');
     function redirect_to_checkout() {
         global $woocommerce;
         $checkout_url = $woocommerce->cart->get_checkout_url();
@@ -425,23 +425,18 @@ if ( class_exists( 'BuddyPress' ) ) {
 	define( 'BP_DEFAULT_COMPONENT', 'profile' );
 
 
-	// BuddyPress Nav & Subnav
-	add_action( 'bp_setup_nav', 'tk_bp_nav_tabs', 9999 );
 
-	function tk_bp_nav_tabs() {
-		global $bp;
+	// BuddyPress Nav & Subnav Changes
+	function tk_rename_profile_tabs() {
 
-		// This is how you remove nav tabs or subnav tabs
-		// bp_core_remove_nav_item( 'activity' );
-		// bp_core_remove_subnav_item( $bp->profile->slug, 'change-cover-image' );
-
-		// Renaming a few tabs here
-		$bp->bp_options_nav['profile']['public']['name'] = 'Profile';
-		$bp->bp_options_nav['profile']['edit']['name'] = 'Edit Profile';
-		$bp->bp_options_nav['profile']['change-avatar']['name'] = 'Change Avatar';
-		$bp->bp_options_nav['profile']['change-cover-image']['name'] = 'Change Cover';
+	      buddypress()->members->nav->edit_nav( array( 'name' => 'Profile', ), 'public', 'profile' );
+				buddypress()->members->nav->edit_nav( array( 'name' => 'Edit Profile', ), 'edit', 'profile' );
+				buddypress()->members->nav->edit_nav( array( 'name' => 'Profile Image', ), 'change-avatar', 'profile' );
+				buddypress()->members->nav->edit_nav( array( 'name' => 'Background Image', ), 'change-cover-image', 'profile' );
 
 	}
+	add_action( 'bp_setup_nav', 'tk_rename_profile_tabs', 100 );
+
 
 	// BuddyPress Site-Wide Activity Stream - Change Title to the Page Title that was setup for the actual page
 	add_filter( 'bp_get_directory_title', 'buddypress_sitewide_activity_title', 10, 2 );
@@ -458,3 +453,26 @@ if ( class_exists( 'BuddyPress' ) ) {
 
 
 }
+
+
+/**
+ * Display LifterLMS Course and Lesson sidebars
+ * on courses and lessons in place of the sidebar returned by
+ * this function
+ * @param    string     $id    default sidebar id (an empty string)
+ * @return   string
+ */
+function lifter_lms_sidebar_function( $id ) {
+	$my_sidebar_id = 'sidebar-1';
+	return $my_sidebar_id;
+}
+add_filter( 'llms_get_theme_default_sidebar', 'lifter_lms_sidebar_function' );
+
+/**
+ * Declare explicit theme support for LifterLMS course and lesson sidebars
+ * @return   void
+ */
+function my_llms_theme_support(){
+	add_theme_support( 'lifterlms-sidebars' );
+}
+add_action( 'after_setup_theme', 'my_llms_theme_support' );

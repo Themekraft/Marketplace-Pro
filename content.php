@@ -26,7 +26,7 @@
 							/* translators: used between list items, there is a space after the comma */
 							$categories_list = get_the_category_list( __( ', ', '_tk' ) ); ?>
 
-						<small class="cat-links" style="text-transform: uppercase;">
+						<div class="cat-links" style="text-transform: uppercase;">
 							<i class="fa fa-copy" style="margin-right: 4px; display: none;"></i>
 							<?php
 
@@ -37,7 +37,7 @@
 							endif; // End if categories
 
 							?>
-						</small>
+						</div>
 
 						<?php tk_posted_on(); ?>
 				</div>

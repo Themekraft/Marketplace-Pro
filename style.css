@@ -4,7 +4,7 @@ Theme URI: https://github.com/Themekraft/Marketplace-Pro
 Author: Konrad Sroka
 Author URI: http://themekraft.com
 Description: A clean starter theme. Perfect for WooCommerce, BuddyPress & WC Vendors. Another tool by ThemeKraft.
-Version: 1.3
+Version: 1.4
 License: GNU General Public License v3.0 /
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Tags: coffee, surf
@@ -1057,6 +1057,15 @@ display: block;
 		clear: left;
 	}
 }
+.cat-links {
+    float: left;
+    width: calc( 100% - 100px );
+}
+.single-post .cat-links {
+    width: calc( 100% - 150px );
+		font-size: 17px;
+}
+
 
 
 /* Blog */
@@ -1111,6 +1120,7 @@ article.hentry.post,
     border: none;
     color: #999;
     display: block;
+		overflow: auto;
 		font-size: 14px;
 }
 .entry-content {
@@ -1130,6 +1140,9 @@ article.hentry.post,
 }
 .entry-meta .posted-on {
     float: right;
+}
+.single-post .entry-meta .posted-on {
+    line-height: 1;
 }
 @media (min-width: 1200px) {
 	.entry-summary {
@@ -1984,6 +1997,14 @@ img.avatar {
 	background: #fbfbfb;
 	color: #999;
 }
+
+#af-welcome-card-main {
+	display: none;
+}
+.front-page #af-welcome-card-main {
+	display: block;
+}
+
 
 @media (max-width: 767px) {
 	.bp-user .main-content {
@@ -3024,6 +3045,9 @@ ol.tribe-list-widget {
 }
 .front-page #af-home-main .all-100 {
     padding-left: 0;
+}
+.bp-user #dashboard-main {
+	padding: 0;
 }
 .af-dashboard-home-tile {
   margin-bottom: 30px;
