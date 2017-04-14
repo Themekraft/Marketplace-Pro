@@ -4,7 +4,7 @@ Theme URI: https://github.com/Themekraft/Marketplace-Pro
 Author: Konrad Sroka
 Author URI: http://themekraft.com
 Description: A clean starter theme. Perfect for WooCommerce, BuddyPress & WC Vendors. Another tool by ThemeKraft.
-Version: 1.4
+Version: 1.5
 License: GNU General Public License v3.0 /
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Tags: coffee, surf
@@ -152,13 +152,14 @@ input[type="submit"],
 	font-size: 13px;
 	font-weight: normal;
 	text-decoration: none;
-	text-shadow: -1px -1px 0 rgba(0,0,0,0.1);
-	background: #3f3f3f;
-	border: 1px solid rgba(0,0,0,0.15);
-	color: #fff;
+	background: #fbfbfb;
+	border: 1px solid rgba(0,0,0,.1);
+	color: #3f3f3f;
 	transition: all 0.08s ease-out;
 	-webkit-transition: all 0.08s ease-out;
 	text-transform: capitalize;
+	text-shadow: none;
+	box-shadow: 1px 1px 3px rgba(0,0,0,0.08);
 }
 input[type="button"]:hover,
 input[type="reset"]:hover,
@@ -170,9 +171,9 @@ input[type="submit"]:focus,
 .button:focus,
 .btn:hover,
 .btn:focus {
-	background: #555;
+	background: #f1f1f1;
 	border: 1px solid rgba(0,0,0,0.15);
-	color: #fff;
+  color: #3f3f3f;
 	box-shadow: none;
 	text-decoration: none;
 }
@@ -1222,6 +1223,22 @@ a .entry-content-thumbnail:hover {
 #comments .comment-meta {
 	font-size: 80%;
 }
+form.comment-form .comment-form-author label,
+form.comment-form .comment-form-email label,
+form.comment-form .comment-form-url label {
+    display: none;
+}
+form.comment-form input#author,
+form.comment-form input#email,
+form.comment-form input#url {
+	border: 1px solid rgba(0,0,0,0.15);
+	width: 100%;
+	display: block;
+	padding: 12px;
+	margin: 5px 0;
+}
+
+
 
 /* Footer */
 #footer {
@@ -3040,14 +3057,14 @@ ol.tribe-list-widget {
 #dashboard-main {
   background: #fbfbfb;
 }
+.front-page #dashboard-main {
+	padding: 40px 0 70px;
+}
 .front-page .wcvendors-pro-dashboard-wrapper {
   overflow: hidden;
 }
 .front-page #af-home-main .all-100 {
     padding-left: 0;
-}
-.bp-user #dashboard-main {
-	padding: 0;
 }
 .af-dashboard-home-tile {
   margin-bottom: 30px;

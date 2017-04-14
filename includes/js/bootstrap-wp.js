@@ -6,8 +6,12 @@ jQuery( document ).ready( function( jQuery ) {
     // comment reply links
     jQuery( '.comment-reply-link' ).addClass( 'btn btn-primary' );
 
-    // submit buttons in the comment reply forms
+    // comment reply forms
     jQuery( '#commentsubmit' ).addClass( 'btn btn-primary' );
+    jQuery( 'form.comment-form input#author' ).attr('placeholder', 'Your Name');
+    jQuery( 'form.comment-form input#email' ).attr('placeholder', 'Your Email');
+    jQuery( 'form.comment-form input#url' ).attr('placeholder', 'Your Website');
+
 
     // WordPress default widgets
     jQuery( 'input.search-field' ).addClass( 'form-control' );
@@ -40,7 +44,7 @@ jQuery( document ).ready( function( jQuery ) {
     });
 
     // auto smooth scroll for href="#somethin"
-    // just on homepage!! deactivate if you get issues with other scripts 
+    // just on homepage!! deactivate if you get issues with other scripts
     jQuery(function() {
       if (jQuery('body.front-page').length) {
         jQuery('a[href*=\\#]:not([href=\\#])').click(function() {

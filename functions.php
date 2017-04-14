@@ -443,12 +443,21 @@ if ( class_exists( 'BuddyPress' ) ) {
 
 	function buddypress_sitewide_activity_title( $title) {
 
+		if ( !bp_is_active( 'notifications' ) ) {
+
+			return;
+
+		} else {
+
 			global $post; global $bp;
 			if ( bp_is_activity_front_page() ) {
 					$title = $post->post_title;
 			}
 
 			return $title;
+
+		}
+
 	}
 
 
