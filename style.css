@@ -1078,8 +1078,8 @@ display: block;
     margin-bottom: 30px;
 }
 article.hentry.post,
-.front-page .hentry,
-.blog .hentry {
+.front-page .hentry.post,
+.blog .hentry.post {
     padding: 0 15px 15px;
     background: #fff;
     border: 1px solid #ddd;
