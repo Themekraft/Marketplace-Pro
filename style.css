@@ -276,6 +276,10 @@ input[type="submit"]:focus,
 		text-align: center;
 	}
 }
+.center {
+	text-align: center;
+}
+
 
 /* Images and wp-captions should always fit and be responsive */
 img {
